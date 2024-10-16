@@ -36,7 +36,7 @@
     </div>
     <div>
       <button
-        class="bg-purple-900 text-white font-medium px-4 py-2 rounded-md flex gap-1 items-center"
+        class="bg-gaws-base-color text-white font-medium px-4 py-2 rounded-md flex gap-1 items-center"
       >
         Apply Now
         <svg
