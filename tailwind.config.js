@@ -12,6 +12,7 @@ export default {
     extend: {
       fontSize: {
         "40px": "40px",
+        "8xl": "6rem",
       },
     },
   },
