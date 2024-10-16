@@ -127,6 +127,19 @@
         </p>
       </div>
     </div>
+
+    <!-- Services List -->
+
+    <section>
+      <header class="flex flex-col items-center justify-center">
+        <h1 class="font-bold text-4xl">Capabilities</h1>
+        <p>
+          Our capabilities will help organizations transform their business,
+          increase efficiency, and reach their customers.
+        </p>
+      </header>
+      <Hero />
+    </section>
   </div>
 </template>
 
