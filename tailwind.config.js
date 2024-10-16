@@ -9,7 +9,11 @@ export default {
     "./error.vue",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontSize: {
+        "40px": "40px",
+      },
+    },
   },
   plugins: [],
 };
