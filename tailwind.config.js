@@ -28,6 +28,7 @@ export default {
           900: "#1e3a8a",
           950: "#172554",
         },
+        "gaws-base-color": "#070051",
       },
       fontFamily: {
         body: [
