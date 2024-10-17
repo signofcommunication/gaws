@@ -1,3 +1,5 @@
+<script setup></script>
+
 <template>
   <nav>
     <div
@@ -38,36 +40,35 @@
             <NuxtLink
               to="/services"
               class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
-              aria-current="page"
               >Services</NuxtLink
             >
           </li>
           <li>
-            <a
+            <NuxtLink
               href="/about"
               class="block py-2 px-3 text-gray-900 rounded md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-              >About Us</a
+              >About Us</NuxtLink
             >
           </li>
           <li>
-            <a
+            <NuxtLink
               href="/career"
               class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-              >Career</a
+              >Career</NuxtLink
             >
           </li>
           <li>
-            <a
+            <NuxtLink
               href="/blog"
               class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-              >Blog</a
+              >Blog</NuxtLink
             >
           </li>
           <li>
-            <a
+            <NuxtLink
               href="/contact-us"
               class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-              >Contact Us</a
+              >Contact Us</NuxtLink
             >
           </li>
         </ul>
