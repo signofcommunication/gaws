@@ -13,6 +13,7 @@ export default {
       fontSize: {
         "40px": "40px",
         "8xl": "6rem",
+        "45px": "45px",
       },
       colors: {
         primary: {
