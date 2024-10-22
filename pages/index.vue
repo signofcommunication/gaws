@@ -42,42 +42,59 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+// Import images
+import daihatsuLogo from '@/assets/Daihatsu.png';
+import meidenLogo from '@/assets/meiden.png';
+import wuerthLogo from '@/assets/Wuerth 1.png';
+import pokphandLogo from '@/assets/pokphand.png';
+import toyotaLogo from '@/assets/toyota-indonesia.png';
+import peroduaLogo from '@/assets/perodua.png';
+import brtLogo from '@/assets/brt.png';
+import ranchMarketLogo from '@/assets/ranch-market.png';
+import astraUdLogo from '@/assets/astra-ud.png';
 
-const trustedByImages = ref([
-  { link: new URL(`../assets/Daihatsu.png`, import.meta.url).href },
-  { link: new URL(`../assets/meiden.png`, import.meta.url).href },
-  { link: new URL(`../assets/Daihatsu.png`, import.meta.url).href },
-  { link: new URL(`../assets/Wuerth 1.png`, import.meta.url).href },
-  { link: new URL(`../assets/Daihatsu.png`, import.meta.url).href },
-  { link: new URL(`../assets/pokphand.png`, import.meta.url).href },
-  { link: new URL(`../assets/toyota-indonesia.png`, import.meta.url).href },
-  { link: new URL(`../assets/perodua.png`, import.meta.url).href },
-  { link: new URL(`../assets/brt.png`, import.meta.url).href },
-  { link: new URL(`../assets/ranch-market.png`, import.meta.url).href },
-  { link: new URL(`../assets/astra-ud.png`, import.meta.url).href }
-]);
+// Service Logos
+import graduationCapLogo from '@/assets/Graduation Cap.png';
+import processorLogo from '@/assets/Processor.png';
+import gearsLogo from '@/assets/Gears.png';
+import deploymentLogo from '@/assets/Deployment.png';
 
-const servicesImages = ref([
+const trustedByImages = [
+  { link: daihatsuLogo },
+  { link: meidenLogo },
+  { link: wuerthLogo },
+  { link: pokphandLogo },
+  { link: toyotaLogo },
+  { link: peroduaLogo },
+  { link: brtLogo },
+  { link: ranchMarketLogo },
+  { link: astraUdLogo }
+];
+
+const servicesImages = [
   {
     title: 'Education Solutions',
-    logo: new URL('/assets/Graduation Cap.png',import.meta.url).href,
-    description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse gravida viverra vestibulum. Aenean eros tortor, sagittis id lorem quis, auctor facilisis nunc.'
+    logo: graduationCapLogo,
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse gravida viverra vestibulum. Aenean eros tortor, sagittis id lorem quis, auctor facilisis nunc.'
   },
   {
     title: 'Embedded Systems',
-    logo: new URL('/assets/Processor.png',import.meta.url).href,
-    description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse gravida viverra vestibulum. Aenean eros tortor, sagittis id lorem quis, auctor facilisis nunc.'
+    logo: processorLogo,
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse gravida viverra vestibulum. Aenean eros tortor, sagittis id lorem quis, auctor facilisis nunc.'
   },
   {
     title: 'Industrial Solutions',
-    logo: new URL('/assets/Gears.png',import.meta.url).href,
-    description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse gravida viverra vestibulum. Aenean eros tortor, sagittis id lorem quis, auctor facilisis nunc.'
+    logo: gearsLogo,
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse gravida viverra vestibulum. Aenean eros tortor, sagittis id lorem quis, auctor facilisis nunc.'
   },
   {
     title: 'Manufacturing Solutions',
-    logo: new URL('/assets/Deployment.png',import.meta.url).href,
-    description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse gravida viverra vestibulum. Aenean eros tortor, sagittis id lorem quis, auctor facilisis nunc.'
+    logo: deploymentLogo,
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse gravida viverra vestibulum. Aenean eros tortor, sagittis id lorem quis, auctor facilisis nunc.'
   }
-])
+];
 </script>
