@@ -45,35 +45,40 @@
           <li>
             <a
               href="/services"
-              class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
+              :class="isActive('/services')"
+              class="block py-2 px-3 text-white"
               >Services</a
             >
           </li>
           <li>
             <a
               href="/about"
-              class="block py-2 px-3 text-gray-900 rounded md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+              :class="isActive('/about')"
+              class="block py-2 px-3 text-white"
               >About Us</a
             >
           </li>
           <li>
             <a
               href="/career"
-              class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+              :class="isActive('/career')"
+              class="block py-2 px-3 text-white"
               >Career</a
             >
           </li>
           <li>
             <a
               href="/blog"
-              class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+              :class="isActive('/blog')"
+              class="block py-2 px-3 text-white"
               >Blog</a
             >
           </li>
           <li>
             <a
               href="/contact-us"
-              class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+              :class="isActive('/contact-us')"
+              class="block py-2 px-3 text-white"
               >Contact Us</a
             >
           </li>
@@ -85,6 +90,7 @@
 
 <script setup>
 import { ref } from 'vue';
+import { useRoute } from 'vue-router';
 
 // Define a reactive state for menu open/close
 const isMenuOpen = ref(false);
@@ -92,5 +98,15 @@ const isMenuOpen = ref(false);
 // Toggle function to show/hide the menu
 const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value;
+};
+
+// Use vue-router's useRoute to check the current route
+const route = useRoute();
+
+// Function to add underline when the route matches
+const isActive = (path) => {
+  return route.path === path
+    ? 'text-blue-700 border-b-2 border-blue-700'
+    : 'text-gray-900';
 };
 </script>
