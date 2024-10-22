@@ -1,7 +1,8 @@
 <template>
   <!-- Our Services -->
-
-  <section class="container max-w-screen-xl mx-auto">
+  <section
+    class="container max-w-screen-xl mx-auto flex flex-col justify-center items-center"
+  >
     <h1 class="text-4xl text-center">Our Services</h1>
     <div class="grid grid-cols-2 gap-4 md:grid-cols-4">
       <div
@@ -18,6 +19,12 @@
         <p>{{ service.description }}</p>
       </div>
     </div>
+    <button
+      type="button"
+      class="text-white bg-purple-700 hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-xl px-5 py-2.5 text-center mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900"
+    >
+      Purple
+    </button>
   </section>
 
   <!-- Trusted By -->
