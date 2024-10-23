@@ -37,7 +37,7 @@
       <div
         v-for="service in servicesImages"
         :key="service.title"
-        class="bg-pink-100 p-6 rounded-lg"
+        class="p-6 rounded-lg shadow-custom bg-[#ecf1f9]"
       >
         <img
           :src="service.logo"
@@ -48,6 +48,7 @@
         <p>{{ service.description }}</p>
       </div>
     </div>
+
     <a
       href="/services"
       class="text-white bg-purple-700 hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-xl px-5 py-2.5 text-center mt-10 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900"
