@@ -1,5 +1,5 @@
 <template>
-  <section class="max-w screen mx-auto border border-sky-500">
+  <section class="max-w screen mx-auto">
     <CareerDetail />
   </section>
 </template>

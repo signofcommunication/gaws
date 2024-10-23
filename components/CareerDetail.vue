@@ -1,7 +1,7 @@
 <template>
   <section class="min-h-screen">
     <!-- Job Header -->
-    <header class="bg-white border-b">
+    <header class="bg-white">
       <div class="container mx-auto px-4 py-8">
         <div
           class="flex flex-col md:flex-row md:items-center md:justify-between"
