@@ -35,7 +35,8 @@
       </div>
     </div>
     <div>
-      <button
+      <a
+        href="/detail-career"
         class="bg-gaws-base-color text-white font-medium px-4 py-2 rounded-md flex gap-1 items-center"
       >
         Apply Now
@@ -53,7 +54,7 @@
             d="M13 7l5 5m0 0l-5 5m5-5H6"
           />
         </svg>
-      </button>
+      </a>
     </div>
   </div>
 </template>
