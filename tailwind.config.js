@@ -30,6 +30,7 @@ export default {
           950: "#172554",
         },
         "gaws-base-color": "#070051",
+        "gaws-secondary-color": "45474B",
       },
       fontFamily: {
         body: [

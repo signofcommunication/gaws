@@ -20,7 +20,7 @@
           <div class="flex items-stretch justify-center">
             <div class="grid md:grid-cols-2">
               <div class="h-full pr-6">
-                <p class="mt-3 mb-12 text-lg text-gray-600 dark:text-slate-400">
+                <p class="mt-3 mb-12 text-lg text-gaws-secondary-color">
                   Class aptent taciti sociosqu ad litora torquent per conubia
                   nostra, per inceptos himenaeos. Duis nec ipsum orci. Ut
                   scelerisque sagittis ante, ac tincidunt sem venenatis ut.
@@ -52,12 +52,12 @@
                       <h3 class="mb-2 text-lg font-medium leading-6 text-black">
                         Our Address
                       </h3>
-                      <p class="text-gray-600 dark:text-slate-400">
+                      <p class="text-gaws-base-color">
                         ITC Cemp. Mas, Komplek Blok N-10, Jl. Letjen Suprapto,
                         RW.8, Sumur Batu, Kec. Kemayoran, DKI Jakarta, Daerah
                         Khusus Ibukota Jakarta 10640
                       </p>
-                      <p class="text-gray-600 dark:text-slate-400">Jakarta</p>
+                      <p class="text-gaws-base-color">Jakarta</p>
                     </div>
                   </li>
                   <li class="flex">
@@ -87,10 +87,8 @@
                       <h3 class="mb-2 text-lg font-medium leading-6 text-black">
                         Contact
                       </h3>
-                      <p class="text-gray-600 dark:text-slate-400">
-                        Mobile: (021) 42888951
-                      </p>
-                      <p class="text-gray-600 dark:text-slate-400">
+                      <p class="text-gaws-base-color">Mobile: (021) 42888951</p>
+                      <p class="text-gaws-base-color">
                         Mail: gaws-it@gaws-it.com
                       </p>
                     </div>
@@ -119,10 +117,10 @@
                       <h3 class="mb-2 text-lg font-medium leading-6 text-black">
                         Working hours
                       </h3>
-                      <p class="text-gray-600 dark:text-slate-400">
+                      <p class="text-gaws-base-color">
                         Monday - Friday: 08:00 - 17:00
                       </p>
-                      <p class="text-gray-600 dark:text-slate-400">
+                      <p class="text-gaws-base-color">
                         Saturday &amp; Sunday: 08:00 - 12:00
                       </p>
                     </div>

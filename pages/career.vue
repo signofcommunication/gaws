@@ -9,15 +9,15 @@
           We are looking for hardworking, passionate <br />
           and inquisitive people.
         </h1>
-        <button
-          type="button"
+        <a
+          href="#job-listing"
           class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
         >
           View Opening Positon
-        </button>
+        </a>
       </div>
     </header>
-    <section class="py-8">
+    <section class="py-8" id="job-listing">
       <div class="header flex flex-col items-center justify-center text-center">
         <h1 class="font-bold text-4xl">Opening Position</h1>
         <p class="max-w-6xl my-6">
