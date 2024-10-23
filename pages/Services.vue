@@ -11,6 +11,12 @@
         initiatives. We offer multiple choices of technology services, from
         strategy, implementation, and maintenance.
       </p>
+      <a
+        href="#services-list"
+        class="text-white bg-purple-700 hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-xl px-5 py-2.5 text-center mt-10 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900"
+      >
+        View More
+      </a>
     </div>
   </section>
 
@@ -130,7 +136,7 @@
 
     <!-- Services List -->
 
-    <section>
+    <section id="services-list">
       <header class="flex flex-col items-center justify-center">
         <h1 class="font-bold text-4xl">Capabilities</h1>
         <p>
