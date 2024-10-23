@@ -1,9 +1,38 @@
 <template>
+  <!-- Header -->
+  <header
+    class="bg-[url('/assets/heading.jpg')] bg-cover bg-no-repeat h-screen"
+  >
+    <div
+      class="container mx-auto text-white h-full flex flex-col justify-center p-4"
+    >
+      <!-- Responsive Heading -->
+      <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold">
+        We Simplify IT for Your Success
+      </h1>
+
+      <!-- Responsive Paragraph -->
+      <p class="my-4 sm:my-6 text-sm sm:text-base md:text-lg">
+        Our mission is to deliver IT solutions that enhance product quality,
+        <br />
+        streamline processes, and empower quick,<br />
+        strategic decisions—driving efficiency and growth for your business.
+      </p>
+
+      <!-- Responsive Button -->
+      <a
+        href="#"
+        class="text-base sm:text-lg bg-gaws-base-color hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full px-4 py-2 sm:px-5 sm:py-2.5 text-center inline-flex max-w-max me-2 mb-2 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        >Get Started</a
+      >
+    </div>
+  </header>
+
   <!-- Our Services -->
   <section
-    class="container max-w-screen-xl mx-auto flex flex-col justify-center items-center"
+    class="container max-w-screen-xl mx-auto flex flex-col justify-center items-center my-16"
   >
-    <h1 class="text-4xl text-center">Our Services</h1>
+    <h1 class="text-4xl text-center mb-12">Our Services</h1>
     <div class="grid grid-cols-2 gap-4 md:grid-cols-4">
       <div
         v-for="service in servicesImages"
@@ -19,19 +48,19 @@
         <p>{{ service.description }}</p>
       </div>
     </div>
-    <button
-      type="button"
-      class="text-white bg-purple-700 hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-xl px-5 py-2.5 text-center mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900"
+    <a
+      href="#"
+      class="text-white bg-purple-700 hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-xl px-5 py-2.5 text-center mt-10 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900"
     >
-      Purple
-    </button>
+      View More
+    </a>
   </section>
 
   <!-- Trusted By -->
   <section
-    class="container max-w-screen-xl flex flex-col mx-auto items-center justify-center section-gap"
+    class="container max-w-screen-xl flex flex-col mx-auto items-center justify-center my-16"
   >
-    <h1 class="text-40px font-bold">Trusted By</h1>
+    <h1 class="text-40px font-bold mb-12">Trusted By</h1>
     <div class="grid grid-cols-6 gap-8 w-full">
       <div
         v-for="(link, index) in trustedByImages"
