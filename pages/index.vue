@@ -49,7 +49,7 @@
       </div>
     </div>
     <a
-      href="#"
+      href="/services"
       class="text-white bg-purple-700 hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-xl px-5 py-2.5 text-center mt-10 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900"
     >
       View More
@@ -70,7 +70,7 @@
         <img
           :src="link.link"
           alt="clients"
-          class="max-w-full max-h-full object-contain"
+          class="max-w-full max-h-full object-contain grayscale"
         />
       </div>
     </div>
@@ -96,7 +96,7 @@ import gearsLogo from '@/assets/Gears.png';
 import deploymentLogo from '@/assets/Deployment.png';
 
 const trustedByImages = [
-  { link: daihatsuLogo },
+  { link: astraUdLogo },
   { link: meidenLogo },
   { link: wuerthLogo },
   { link: pokphandLogo },
@@ -104,7 +104,6 @@ const trustedByImages = [
   { link: peroduaLogo },
   { link: brtLogo },
   { link: ranchMarketLogo },
-  { link: astraUdLogo }
 ];
 
 const servicesImages = [
