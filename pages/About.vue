@@ -1,14 +1,14 @@
 <template>
   <div
-    class="container max-w-screen-xl mx-auto bg-dark h-screen flex flex-col items-center justify-center"
+    class="container max-w-screen-xl mx-auto bg-dark min-h-screen flex flex-col items-center justify-center px-4"
   >
     <header class="text-center flex flex-col justify-center items-center">
-      <h1 class="font-bold text-40px">
+      <h1 class="font-bold text-3xl sm:text-4xl md:text-5xl">
         Gaws Simplifying Complexity. <br />
         We make IT simple.
       </h1>
       <div class="description mt-8">
-        <p class="max-w-3xl">
+        <p class="max-w-xl sm:max-w-2xl md:max-w-3xl text-base md:text-lg">
           GAWS was established in 1998 with a strong foundation of expertise and
           a highly capable team. From the very beginning, we’ve been committed
           to actively supporting our clients in achieving their goals through
@@ -16,7 +16,7 @@
           continuously evolved, becoming a trusted partner across diverse
           industries.
         </p>
-        <p class="max-w-3xl mt-8">
+        <p class="max-w-xl sm:max-w-2xl md:max-w-3xl mt-8 text-base md:text-lg">
           Our experience spans a wide array of sectors, developing systems for
           industrial, manufacturing, logistics, finance, sales & marketing,
           services, telecommunications, RFID, education, and even embedded
@@ -28,29 +28,34 @@
   </div>
 
   <!-- Vision & Mission -->
-
   <div
     id="vision-mission"
-    class="max-w-full mx-auto bg-dark h-screen flex flex-col items-center justify-center"
+    class="max-w-full mx-auto bg-dark min-h-screen flex flex-col items-center justify-center px-4"
   >
-    <div class="container max-w-screen-xl h-full flex">
-      <div class="w-2/4 flex justify-center items-center">
-        <img src="/assets/brainstorming.png" alt="" />
+    <div class="container max-w-screen-xl h-full flex flex-col md:flex-row">
+      <div class="w-full md:w-1/2 flex justify-center items-center">
+        <img
+          src="/assets/brainstorming.png"
+          alt="Brainstorming"
+          class="w-64 sm:w-80 md:w-full"
+        />
       </div>
-      <div class="flex flex-col justify-center w-2/4">
-        <h1 class="font-bold vision">Vision</h1>
-        <p>
+      <div
+        class="flex flex-col justify-center w-full md:w-1/2 mt-8 md:mt-0 px-4"
+      >
+        <h1 class="font-bold text-2xl md:text-3xl vision mb-4">Vision</h1>
+        <p class="text-base md:text-lg mb-6">
           Menjadi perusahaan teknologi terdepan yang memberikan solusi inovatif
           untuk memajukan kehidupan masyarakat dan dunia bisnis secara
           berkelanjutan.
         </p>
-        <h1 class="font-bold mission">Mission</h1>
-        <ol class="list-decimal">
-          <li>
+        <h1 class="font-bold text-2xl md:text-3xl mission mb-4">Mission</h1>
+        <ol class="list-decimal pl-5 text-base md:text-lg">
+          <li class="mb-4">
             Mengembangkan produk dan layanan yang dapat memberikan manfaat nyata
             bagi pelanggan melalui teknologi yang efisien dan ramah lingkungan.
           </li>
-          <li>
+          <li class="mb-4">
             Memberikan pengalaman pelanggan yang unggul melalui layanan yang
             cepat, responsif, dan personalisasi.
           </li>
@@ -65,27 +70,38 @@
 
   <!-- Why Gaws -->
   <div
-    class="container max-w-screen-xl h-full flex flex-col mx-auto section-gap"
+    class="container max-w-screen-xl h-full flex flex-col mx-auto section-gap px-4"
   >
-    <h1 class="text-center why font-bold">Why Gaws?</h1>
-
-    <div class="flex items-center justify-center">
-      <div class="flex flex-col justify-center items-center">
-        <img src="/assets/Startup launch, ideas and metrics.png" alt="" />
+    <h1 class="text-center why font-bold text-3xl md:text-4xl mb-12">
+      Why Gaws?
+    </h1>
+    <div class="flex flex-col md:flex-row items-center justify-center gap-8">
+      <div
+        class="flex flex-col justify-center items-center text-center max-w-md"
+      >
+        <img
+          src="/assets/Startup launch, ideas and metrics.png"
+          alt="Startup Launch"
+          class="w-48 sm:w-56 md:w-64 mb-4"
+        />
         <h1 class="font-bold text-2xl my-2">Weekly / Biweekly Meeting</h1>
-        <p class="max-w-md text-center text-sm">
+        <p class="text-sm">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet
-          diam erat. Aenean euismod velit id dignissim ultrices. Aliquam non
-          quam sit amet lacus mattis consequat.
+          diam erat. Aenean euismod velit id dignissim ultrices.
         </p>
       </div>
-      <div class="flex flex-col justify-center items-center">
-        <img src="/assets/Ai assistant in retail.png" alt="" />
+      <div
+        class="flex flex-col justify-center items-center text-center max-w-md"
+      >
+        <img
+          src="/assets/Ai assistant in retail.png"
+          alt="AI Assistant"
+          class="w-48 sm:w-56 md:w-64 mb-4"
+        />
         <h1 class="font-bold text-2xl my-2">Flexible Changes</h1>
-        <p class="max-w-md text-center text-sm">
+        <p class="text-sm">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet
-          diam erat. Aenean euismod velit id dignissim ultrices. Aliquam non
-          quam sit amet lacus mattis consequat.
+          diam erat. Aenean euismod velit id dignissim ultrices.
         </p>
       </div>
     </div>
@@ -93,19 +109,37 @@
 
   <!-- Happy Clients -->
   <div
-    class="container max-w-screen-xl flex flex-col mx-auto items-center justify-center section-gap"
+    class="container max-w-screen-xl flex flex-col mx-auto items-center justify-center section-gap px-4"
   >
-    <h1 class="why font-bold">Happy Clients</h1>
-    <p class="text-base">
+    <h1 class="why font-bold text-3xl md:text-4xl mb-8">Happy Clients</h1>
+    <p class="text-center text-base md:text-lg mb-8">
       Many companies have trusted GAWS. You still have doubts? contact us now
     </p>
-    <div class="flex justify-between items-center w-full">
-      <img src="/assets/Daihatsu.png" alt="" class="clients" />
-      <img src="/assets/Isuzu.png" alt="" class="clients" />
-      <img src="/assets/meiden.png" alt="" class="clients" />
-      <img src="/assets/Wuerth 1.png" alt="" class="clients" />
-      <img src="/assets/pokphand.png" alt="" class="clients" />
-      <img src="/assets/toyota-indonesia.png" alt="" class="clients" />
+    <div
+      class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 w-full justify-items-center"
+    >
+      <img
+        src="/assets/Daihatsu.png"
+        alt="Daihatsu"
+        class="clients w-20 h-auto"
+      />
+      <img src="/assets/Isuzu.png" alt="Isuzu" class="clients w-20 h-auto" />
+      <img src="/assets/meiden.png" alt="Meiden" class="clients w-20 h-auto" />
+      <img
+        src="/assets/Wuerth 1.png"
+        alt="Wuerth"
+        class="clients w-20 h-auto"
+      />
+      <img
+        src="/assets/pokphand.png"
+        alt="Pokphand"
+        class="clients w-20 h-auto"
+      />
+      <img
+        src="/assets/toyota-indonesia.png"
+        alt="Toyota Indonesia"
+        class="clients w-20 h-auto"
+      />
     </div>
   </div>
 </template>
