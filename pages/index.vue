@@ -30,14 +30,16 @@
 
   <!-- Our Services -->
   <section
-    class="container max-w-screen-xl mx-auto flex flex-col justify-center items-center my-16"
+    class="container max-w-screen-xl mx-auto flex flex-col justify-center items-center my-16 px-4"
   >
     <h1 class="text-4xl text-center mb-12">Our Services</h1>
-    <div class="grid grid-cols-2 gap-4 md:grid-cols-4">
+    <div
+      class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+    >
       <div
         v-for="service in servicesImages"
         :key="service.title"
-        class="p-6 rounded-lg shadow-custom bg-[#ecf1f9]"
+        class="p-6 rounded-lg shadow-custom bg-[#ecf1f9] text-center"
       >
         <img
           :src="service.logo"
@@ -59,10 +61,12 @@
 
   <!-- Trusted By -->
   <section
-    class="container max-w-screen-xl flex flex-col mx-auto items-center justify-center my-16"
+    class="container max-w-screen-xl flex flex-col mx-auto items-center justify-center my-16 px-4"
   >
     <h1 class="text-40px font-bold mb-12">Trusted By</h1>
-    <div class="grid grid-cols-6 gap-8 w-full">
+    <div
+      class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 w-full"
+    >
       <div
         v-for="(link, index) in trustedByImages"
         :key="index"
