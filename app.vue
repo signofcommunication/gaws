@@ -1,7 +1,7 @@
 <template>
   <Navbar />
   <NuxtPage />
-  <CTA />
+  <CTA v-if="!isContactPage" />
   <Footer />
 </template>
 
@@ -16,3 +16,11 @@
   filter: blur(1rem);
 }
 </style>
+
+<script setup>
+import { useRoute } from 'vue-router';
+
+const route = useRoute();
+
+const isContactPage = computed(() => route.path === '/contact-us')
+</script>
