@@ -34,6 +34,9 @@
   <!-- Our Services -->
   <section
     class="container max-w-screen-xl mx-auto flex flex-col justify-center items-center my-16 px-4"
+    data-aos="fade-right"
+    data-aos-easing="ease-in-back"
+    data-aos-delay="300"
   >
     <h1 class="text-4xl text-center mb-12">Our Services</h1>
     <div
@@ -65,6 +68,7 @@
   <!-- Trusted By -->
   <section
     class="container max-w-screen-xl flex flex-col mx-auto items-center justify-center my-16 px-4"
+    data-aos="fade-left"
   >
     <h1 class="text-40px font-bold mb-12">Trusted By</h1>
     <ResponsiveMarquee />
