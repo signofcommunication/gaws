@@ -1,6 +1,6 @@
 <template>
   <Navbar />
-  <NuxtPage />
+  <NuxtPage :key="route.fullPath" />
   <CTA v-if="!isContactPage" />
   <Footer />
 </template>
