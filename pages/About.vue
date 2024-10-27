@@ -2,30 +2,46 @@
   <div
     class="container max-w-screen-xl mx-auto bg-dark min-h-screen flex flex-col items-center justify-center px-4"
   >
-    <header class="text-center flex flex-col justify-center items-center">
-      <h1 class="font-bold text-3xl sm:text-4xl md:text-5xl">
-        Gaws Simplifying Complexity. <br />
-        We make IT simple.
-      </h1>
-      <div class="description mt-8">
-        <p class="max-w-xl sm:max-w-2xl md:max-w-3xl text-base md:text-lg">
-          GAWS was established in 1998 with a strong foundation of expertise and
-          a highly capable team. From the very beginning, we’ve been committed
-          to actively supporting our clients in achieving their goals through
-          the most effective and reliable IT solutions. Over the years, we’ve
-          continuously evolved, becoming a trusted partner across diverse
-          industries.
-        </p>
-        <p class="max-w-xl sm:max-w-2xl md:max-w-3xl mt-8 text-base md:text-lg">
-          Our experience spans a wide array of sectors, developing systems for
-          industrial, manufacturing, logistics, finance, sales & marketing,
-          services, telecommunications, RFID, education, and even embedded
-          systems. At GAWS, we take pride in delivering tailored solutions that
-          drive efficiency and success for our clients.
-        </p>
-      </div>
-    </header>
+    <transition name="fade" @before-enter="beforeEnter" @enter="enter">
+      <header class="text-center flex flex-col justify-center items-center">
+        <h1
+          class="font-bold text-3xl sm:text-4xl md:text-5xl"
+          data-aos="fade-up"
+          data-aos-duration="2000"
+        >
+          Gaws Simplifying Complexity. <br />
+          We make IT simple.
+        </h1>
+      </header>
+    </transition>
   </div>
+
+  <!-- Description -->
+  <section
+    class="container max-w-screen-xl mx-auto flex flex-col items-center justify-center my-12"
+  >
+    <div class="description">
+      <p
+        class="max-w-xl sm:max-w-2xl md:max-w-3xl text-base md:text-2xl text-center mb-8"
+      >
+        GAWS was established in 1998 with a strong foundation of expertise and a
+        highly capable team. From the very beginning, we’ve been committed to
+        actively supporting our clients in achieving their goals through the
+        most effective and reliable IT solutions. Over the years, we’ve
+        continuously evolved, becoming a trusted partner across diverse
+        industries.
+      </p>
+      <p
+        class="max-w-xl sm:max-w-2xl md:max-w-3xl text-base md:text-2xl text-center mb-8"
+      >
+        Our experience spans a wide array of sectors, developing systems for
+        industrial, manufacturing, logistics, finance, sales & marketing,
+        services, telecommunications, RFID, education, and even embedded
+        systems. At GAWS, we take pride in delivering tailored solutions that
+        drive efficiency and success for our clients.
+      </p>
+    </div>
+  </section>
 
   <!-- Vision & Mission -->
   <div
@@ -153,7 +169,7 @@
   background-color: #FFFBF5;
 }
 
-.mission,.vision {
+.mission, .vision {
   font-size: 24px;
 }
 
@@ -166,7 +182,7 @@
 }
 
 .clients {
-  filter: grayscale(100%)
+  filter: grayscale(100%);
 }
 
 .container {
@@ -196,5 +212,39 @@
   100% {
     transform: translateX(-100%); /* Move to off-screen to the left */
   }
+}
+</style>
+
+<script setup>
+import { onMounted, onBeforeUnmount } from 'vue';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // Import AOS styles
+
+const beforeEnter = (el) => {
+  el.style.opacity = 0; // Set initial opacity
+};
+
+const enter = (el, done) => {
+  // Animate the opacity to 1 over 0.5 seconds
+  el.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 500 })
+     .onfinish = done; // Call done when the animation is finished
+};
+
+onMounted(() => {
+  AOS.init(); // Initialize AOS
+});
+
+onBeforeUnmount(() => {
+  AOS.refresh(); // Refresh AOS on component unmount
+});
+</script>
+
+<style scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
+  opacity: 0;
 }
 </style>
