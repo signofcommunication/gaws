@@ -111,20 +111,3 @@ const servicesImages = [
   }
 ];
 </script>
-
-<!-- <style scoped>
-@keyframes marquee {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%); /* Move to the left by half the total width */
-  }
-}
-
-.animate-marquee {
-  animation: marquee 20s linear infinite;
-  display: flex;
-  min-width: 200%; /* Ensures the marquee is wide enough */
-}
-</style> -->
