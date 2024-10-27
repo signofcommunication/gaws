@@ -67,19 +67,30 @@
     class="container max-w-screen-xl flex flex-col mx-auto items-center justify-center my-16 px-4"
   >
     <h1 class="text-40px font-bold mb-12">Trusted By</h1>
-    <div
-      class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 w-full"
-    >
-      <div
-        v-for="(link, index) in trustedByImages"
-        :key="index"
-        class="flex justify-center items-center h-24"
-      >
-        <img
-          :src="link.link"
-          alt="clients"
-          class="max-w-full max-h-full object-contain grayscale"
-        />
+    <div class="relative py-12 overflow-hidden">
+      <div class="animate-marquee flex">
+        <div
+          v-for="(link, index) in trustedByImages"
+          :key="index"
+          class="flex justify-center items-center h-40 md:h-24 lg:h-24 px-4"
+        >
+          <img
+            :src="link.link"
+            alt="clients"
+            class="max-w-full max-h-full object-contain grayscale"
+          />
+        </div>
+        <div
+          v-for="(link, index) in trustedByImages"
+          :key="'duplicate-' + index"
+          class="flex justify-center items-center h-40 md:h-24 lg:h-24 px-4"
+        >
+          <img
+            :src="link.link"
+            alt="clients"
+            class="max-w-full max-h-full object-contain grayscale"
+          />
+        </div>
       </div>
     </div>
   </section>
@@ -141,3 +152,20 @@ const servicesImages = [
   }
 ];
 </script>
+
+<style scoped>
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Move to the left by half the total width */
+  }
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+  display: flex;
+  min-width: 200%; /* Ensures the marquee is wide enough */
+}
+</style>
