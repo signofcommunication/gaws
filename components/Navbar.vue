@@ -48,59 +48,59 @@
           class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 dark:border-gray-700"
         >
           <li>
-            <a
-              href="/services"
+            <NuxtLink
+              to="/services"
               :class="[
                   'block py-2 px-3 transition ease-in-out duration-300 hover:border-b-2 hover:border-blue-700',
                   isActive('/services'),
                    isScrolled ? 'text-white' : 'text-black',
                   ]"
-              >Services</a
+              >Services</NuxtLink
             >
           </li>
 
           <li>
-            <a
-              href="/about"
+            <NuxtLink
+              to="/about"
               :class="[
       'block py-2 px-3 transition ease-in-out duration-300 hover:border-b-2 hover:border-blue-700',
   isActive('/about'),
   isScrolled ? 'text-white' : 'text-black',
     ]"
-              >About Us</a
+              >About Us</NuxtLink
             >
           </li>
           <li>
-            <a
-              href="/career"
+            <NuxtLink
+              to="/career"
               :class="[
       'block py-2 px-3 transition ease-in-out duration-300 hover:border-b-2 hover:border-blue-700',
   isActive('/career'),
   isScrolled ? 'text-white' : 'text-black',
     ]"
-              >Career</a
+              >Career</NuxtLink
             >
           </li>
           <li>
-            <a
-              href="/blog"
+            <NuxtLink
+              to="/blog"
               :class="[
       'block py-2 px-3 transition ease-in-out duration-300 hover:border-b-2 hover:border-blue-700',
   isActive('/blog'),
   isScrolled ? 'text-white' : 'text-black',
     ]"
-              >Blog</a
+              >Blog</NuxtLink
             >
           </li>
           <li>
-            <a
-              href="/contact-us"
+            <NuxtLink
+              to="/contact-us"
               :class="[
       'block py-2 px-3 transition ease-in-out duration-300 hover:border-b-2 hover:border-blue-700',
   isActive('/contact-us'),
   isScrolled ? 'text-white' : 'text-black',
     ]"
-              >Contact Us</a
+              >Contact Us</NuxtLink
             >
           </li>
         </ul>
