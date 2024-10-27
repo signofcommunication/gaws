@@ -43,12 +43,6 @@
                 ></path>
               </svg>
             </a>
-            <a
-              href="#"
-              class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-black border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-black dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
-            >
-              Speak to Sales
-            </a>
           </div>
         </div>
 

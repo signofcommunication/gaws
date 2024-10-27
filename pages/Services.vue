@@ -1,12 +1,12 @@
 <template>
-  <section class="bg-gaws-base-color py-10">
+  <section class="bg-gaws-base-color py-16">
     <!-- Header Section -->
     <div
       id="header-services"
-      class="container mx-auto px-6 text-center text-white flex flex-col items-center justify-center"
+      class="container mx-auto px-6 text-center text-white flex flex-col items-center justify-center space-y-6"
     >
       <h2 class="text-3xl font-bold">Make Your Problems Simple</h2>
-      <p class="mt-4 text-lg">
+      <p class="mt-4 text-lg text-lg max-w-3xl mx-auto">
         GAWS has a mission to help enterprises in their digital transformation
         initiatives. We offer multiple choices of technology services, from
         strategy, implementation, and maintenance.
@@ -24,7 +24,9 @@
   <div class="container mx-auto px-6 relative">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 ">
       <!-- Card 1 -->
-      <div class="bg-white shadow-lg rounded-lg p-6 text-center services-card">
+      <div
+        class="bg-white shadow-lg rounded-lg p-6 text-center services-card space-y-4"
+      >
         <div class="mb-4">
           <!-- Replace this with an actual icon -->
           <svg
@@ -56,7 +58,9 @@
       </div>
 
       <!-- Card 2 -->
-      <div class="bg-white shadow-lg rounded-lg p-6 text-center services-card">
+      <div
+        class="bg-white shadow-lg rounded-lg p-6 text-center services-card space-y-4"
+      >
         <div class="mb-4">
           <!-- Replace this with an actual icon -->
           <svg
@@ -82,7 +86,7 @@
       </div>
 
       <!-- Card 3 -->
-      <div class="bg-white shadow-lg rounded-lg p-6 text-center services-card">
+      <div class="bg-white shadow-lg rounded-lg p-6 text-center services-card ">
         <div class="mb-4">
           <!-- Replace this with an actual icon -->
           <svg
@@ -108,7 +112,9 @@
       </div>
 
       <!-- Card 4 -->
-      <div class="bg-white shadow-lg rounded-lg p-6 text-center services-card">
+      <div
+        class="bg-white shadow-lg rounded-lg p-6 text-center services-card space-y-4"
+      >
         <div class="mb-4">
           <!-- Replace this with an actual icon -->
           <svg
@@ -136,10 +142,10 @@
 
     <!-- Services List -->
 
-    <section id="services-list">
-      <header class="flex flex-col items-center justify-center">
+    <section id="services-list" class="py-16">
+      <header class="flex flex-col items-center justify-center space-y-4">
         <h1 class="font-bold text-4xl">Capabilities</h1>
-        <p>
+        <p class="max-w-2xl mx-auto text-center">
           Our capabilities will help organizations transform their business,
           increase efficiency, and reach their customers.
         </p>
