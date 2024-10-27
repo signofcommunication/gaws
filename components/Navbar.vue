@@ -1,7 +1,12 @@
 <template>
-  <nav class="bg-gaws-base-color">
+  <nav
+    :class="[
+      'fixed w-full top-0 transition-colors duration-300 z-50', 
+      isScrolled ? 'bg-gaws-base-color' : 'bg-gaws-white'
+    ]"
+  >
     <div
-      class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+      class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 "
     >
       <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
         <img src="/assets/gaws-logo.png" class="h-26" alt="Gaws Logo" />
@@ -45,40 +50,56 @@
           <li>
             <a
               href="/services"
-              :class="isActive('/services')"
-              class="block py-2 px-3 text-white"
+              :class="[
+                  'block py-2 px-3 transition ease-in-out duration-300 hover:border-b-2 hover:border-blue-700',
+                  isActive('/services'),
+                   isScrolled ? 'text-white' : 'text-black',
+                  ]"
               >Services</a
             >
           </li>
+
           <li>
             <a
               href="/about"
-              :class="isActive('/about')"
-              class="block py-2 px-3 text-white"
+              :class="[
+      'block py-2 px-3 transition ease-in-out duration-300 hover:border-b-2 hover:border-blue-700',
+  isActive('/about'),
+  isScrolled ? 'text-white' : 'text-black',
+    ]"
               >About Us</a
             >
           </li>
           <li>
             <a
               href="/career"
-              :class="isActive('/career')"
-              class="block py-2 px-3 text-white"
+              :class="[
+      'block py-2 px-3 transition ease-in-out duration-300 hover:border-b-2 hover:border-blue-700',
+  isActive('/career'),
+  isScrolled ? 'text-white' : 'text-black',
+    ]"
               >Career</a
             >
           </li>
           <li>
             <a
               href="/blog"
-              :class="isActive('/blog')"
-              class="block py-2 px-3 text-white"
+              :class="[
+      'block py-2 px-3 transition ease-in-out duration-300 hover:border-b-2 hover:border-blue-700',
+  isActive('/blog'),
+  isScrolled ? 'text-white' : 'text-black',
+    ]"
               >Blog</a
             >
           </li>
           <li>
             <a
               href="/contact-us"
-              :class="isActive('/contact-us')"
-              class="block py-2 px-3 text-white"
+              :class="[
+      'block py-2 px-3 transition ease-in-out duration-300 hover:border-b-2 hover:border-blue-700',
+  isActive('/contact-us'),
+  isScrolled ? 'text-white' : 'text-black',
+    ]"
               >Contact Us</a
             >
           </li>
@@ -89,11 +110,12 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted, onUnmounted } from 'vue';
 import { useRoute } from 'vue-router';
 
 // Define a reactive state for menu open/close
 const isMenuOpen = ref(false);
+const isScrolled = ref(false); // Reactive state for scroll detection
 
 // Toggle function to show/hide the menu
 const toggleMenu = () => {
@@ -109,4 +131,28 @@ const isActive = (path) => {
     ? 'text-blue-700 border-b-2 border-blue-700'
     : 'text-gray-900';
 };
+
+// Scroll event listener to detect if navbar should have background color
+const handleScroll = () => {
+  isScrolled.value = window.scrollY > 50; // Adjust scroll position as needed
+};
+
+// Register scroll event listener when component mounts and remove it when it unmounts
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll);
+});
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll);
+});
 </script>
+
+<style scoped>
+.bg-gaws-white {
+  background-color: #ffffff;
+}
+
+.bg-gaws-base-color {
+  background-color: #070051;
+}
+</style>
