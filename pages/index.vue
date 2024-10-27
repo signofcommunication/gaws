@@ -10,9 +10,10 @@
       class="relative container mx-auto text-white h-full flex flex-col justify-center p-4"
     >
       <!-- Responsive Heading -->
-      <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold">
-        We Simplify IT for Your Success
-      </h1>
+      <h1
+        class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold"
+        ref="textElement"
+      ></h1>
 
       <!-- Responsive Paragraph -->
       <p class="my-4 sm:my-6 text-sm sm:text-base md:text-lg">
@@ -76,38 +77,57 @@
 </template>
 
 <script setup>
+import {
+    ref,
+    onMounted
+} from 'vue'
+import {
+    gsap,
+    TextPlugin
+} from 'gsap/all'
 // Service Logos
 import graduationCapLogo from '@/assets/Graduation Cap.png';
 import processorLogo from '@/assets/Processor.png';
 import gearsLogo from '@/assets/Gears.png';
 import deploymentLogo from '@/assets/Deployment.png';
 
+// Initialise GSAP
+gsap.registerPlugin(TextPlugin)
 
-
-const servicesImages = [
-  {
-    title: 'Education Solutions',
-    logo: graduationCapLogo,
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse gravida viverra vestibulum. Aenean eros tortor, sagittis id lorem quis, auctor facilisis nunc.'
-  },
-  {
-    title: 'Embedded Systems',
-    logo: processorLogo,
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse gravida viverra vestibulum. Aenean eros tortor, sagittis id lorem quis, auctor facilisis nunc.'
-  },
-  {
-    title: 'Industrial Solutions',
-    logo: gearsLogo,
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse gravida viverra vestibulum. Aenean eros tortor, sagittis id lorem quis, auctor facilisis nunc.'
-  },
-  {
-    title: 'Manufacturing Solutions',
-    logo: deploymentLogo,
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse gravida viverra vestibulum. Aenean eros tortor, sagittis id lorem quis, auctor facilisis nunc.'
-  }
+const servicesImages = [{
+        title: 'Education Solutions',
+        logo: graduationCapLogo,
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse gravida viverra vestibulum. Aenean eros tortor, sagittis id lorem quis, auctor facilisis nunc.'
+    },
+    {
+        title: 'Embedded Systems',
+        logo: processorLogo,
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse gravida viverra vestibulum. Aenean eros tortor, sagittis id lorem quis, auctor facilisis nunc.'
+    },
+    {
+        title: 'Industrial Solutions',
+        logo: gearsLogo,
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse gravida viverra vestibulum. Aenean eros tortor, sagittis id lorem quis, auctor facilisis nunc.'
+    },
+    {
+        title: 'Manufacturing Solutions',
+        logo: deploymentLogo,
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse gravida viverra vestibulum. Aenean eros tortor, sagittis id lorem quis, auctor facilisis nunc.'
+    }
 ];
+
+const text = "Gaws Simplifying Complexity. We make IT simple."
+
+const textElement = ref(null)
+
+onMounted(() => {
+  textElement.value.textContent = ''
+
+  gsap.to(textElement.value, {
+    text: text, // Use the `text` property with `TextPlugin`
+    duration: 6, // Adjust speed for the typing effect
+    ease: "power4.out",
+    delay: 0.1 // Optional delay before animation starts
+  })
+})
 </script>
