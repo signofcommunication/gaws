@@ -11,7 +11,7 @@
           Join Our Growing Team!
         </h1>
         <h1
-          class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl my-4 font-bold z-50"
+          class="text-3xl sm:text-3xl md:text-4xl lg:text-5xl my-4 font-bold z-50"
         >
           We are looking for hardworking, passionate
           <br class="hidden sm:block" />
