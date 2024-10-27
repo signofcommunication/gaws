@@ -5,7 +5,7 @@
         class="container flex flex-col items-center justify-center text-white mx-auto h-full px-4 text-center"
       >
         <h1 class="text-xl sm:text-2xl md:text-3xl">Join Our Growing Team!</h1>
-        <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl my-4">
+        <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl my-4 font-bold">
           We are looking for hardworking, passionate
           <br class="hidden sm:block" />
           and inquisitive people.
