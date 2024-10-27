@@ -67,63 +67,18 @@
     class="container max-w-screen-xl flex flex-col mx-auto items-center justify-center my-16 px-4"
   >
     <h1 class="text-40px font-bold mb-12">Trusted By</h1>
-    <div class="relative py-12 overflow-hidden">
-      <div class="animate-marquee flex">
-        <div
-          v-for="(link, index) in trustedByImages"
-          :key="index"
-          class="flex justify-center items-center h-40 md:h-24 lg:h-24 px-4"
-        >
-          <img
-            :src="link.link"
-            alt="clients"
-            class="max-w-full max-h-full object-contain grayscale"
-          />
-        </div>
-        <div
-          v-for="(link, index) in trustedByImages"
-          :key="'duplicate-' + index"
-          class="flex justify-center items-center h-40 md:h-24 lg:h-24 px-4"
-        >
-          <img
-            :src="link.link"
-            alt="clients"
-            class="max-w-full max-h-full object-contain grayscale"
-          />
-        </div>
-      </div>
-    </div>
+    <ResponsiveMarquee />
   </section>
 </template>
 
 <script setup>
-// Import images
-import daihatsuLogo from '@/assets/Daihatsu.png';
-import meidenLogo from '@/assets/meiden.png';
-import wuerthLogo from '@/assets/Wuerth 1.png';
-import pokphandLogo from '@/assets/pokphand.png';
-import toyotaLogo from '@/assets/toyota-indonesia.png';
-import peroduaLogo from '@/assets/perodua.png';
-import brtLogo from '@/assets/brt.png';
-import ranchMarketLogo from '@/assets/ranch-market.png';
-import astraUdLogo from '@/assets/astra-ud.png';
-
 // Service Logos
 import graduationCapLogo from '@/assets/Graduation Cap.png';
 import processorLogo from '@/assets/Processor.png';
 import gearsLogo from '@/assets/Gears.png';
 import deploymentLogo from '@/assets/Deployment.png';
 
-const trustedByImages = [
-  { link: astraUdLogo },
-  { link: meidenLogo },
-  { link: wuerthLogo },
-  { link: pokphandLogo },
-  { link: toyotaLogo },
-  { link: peroduaLogo },
-  { link: brtLogo },
-  { link: ranchMarketLogo },
-];
+
 
 const servicesImages = [
   {
@@ -153,7 +108,7 @@ const servicesImages = [
 ];
 </script>
 
-<style scoped>
+<!-- <style scoped>
 @keyframes marquee {
   0% {
     transform: translateX(0);
@@ -168,4 +123,4 @@ const servicesImages = [
   display: flex;
   min-width: 200%; /* Ensures the marquee is wide enough */
 }
-</style>
+</style> -->
