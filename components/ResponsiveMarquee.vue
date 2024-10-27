@@ -43,7 +43,7 @@
   </div>
 </template>
 
-<style>
+<style scoped>
 @keyframes marquee {
   0% {
     transform: translateX(0%);

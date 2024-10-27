@@ -131,36 +131,7 @@
     <p class="text-center text-base md:text-lg mb-8">
       Many companies have trusted GAWS. You still have doubts? contact us now
     </p>
-    <div class="marquee">
-      <div class="marquee-content">
-        <img
-          src="/assets/Daihatsu.png"
-          alt="Daihatsu"
-          class="clients w-20 h-auto"
-        />
-        <img src="/assets/Isuzu.png" alt="Isuzu" class="clients w-20 h-auto" />
-        <img
-          src="/assets/meiden.png"
-          alt="Meiden"
-          class="clients w-20 h-auto"
-        />
-        <img
-          src="/assets/Wuerth 1.png"
-          alt="Wuerth"
-          class="clients w-20 h-auto"
-        />
-        <img
-          src="/assets/pokphand.png"
-          alt="Pokphand"
-          class="clients w-20 h-auto"
-        />
-        <img
-          src="/assets/toyota-indonesia.png"
-          alt="Toyota Indonesia"
-          class="clients w-20 h-auto"
-        />
-      </div>
-    </div>
+    <ResponsiveMarquee />
   </div>
 </template>
 
@@ -179,39 +150,6 @@
 
 .section-gap {
   padding: 100px 0;
-}
-
-.clients {
-  filter: grayscale(100%);
-}
-
-.container {
-  position: relative;
-  overflow: hidden; /* Prevents overflow */
-}
-
-.marquee {
-  width: 100%; /* Full width of the container */
-  overflow: hidden; /* Prevents overflow */
-  white-space: nowrap; /* Prevents items from wrapping to the next line */
-}
-
-.marquee-content {
-  display: inline-flex; /* Arrange items in a line */
-  animation: marquee 15s linear infinite; /* Animation settings */
-}
-
-.clients {
-  margin-right: 20px; /* Spacing between images */
-}
-
-@keyframes marquee {
-  0% {
-    transform: translateX(100%); /* Start off-screen to the right */
-  }
-  100% {
-    transform: translateX(-100%); /* Move to off-screen to the left */
-  }
 }
 </style>
 
