@@ -1,10 +1,13 @@
 <template>
   <!-- Header -->
   <header
-    class="bg-[url('/assets/heading.jpg')] bg-cover bg-no-repeat h-screen"
+    class="relative bg-[url('/assets/heading.jpg')] bg-cover bg-no-repeat h-screen"
   >
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+
     <div
-      class="container mx-auto text-white h-full flex flex-col justify-center p-4"
+      class="relative container mx-auto text-white h-full flex flex-col justify-center p-4"
     >
       <!-- Responsive Heading -->
       <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold">

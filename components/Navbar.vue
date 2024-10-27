@@ -1,7 +1,7 @@
 <template>
   <nav
     :class="[
-      'fixed w-full top-0 transition-colors duration-300 z-50', 
+      'fixed w-full top-0 transition-colors duration-300 z-50',
       isScrolled ? 'bg-gaws-base-color' : 'bg-gaws-white'
     ]"
   >
