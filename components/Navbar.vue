@@ -72,13 +72,13 @@
           </li>
           <li>
             <NuxtLink
-              to="/career"
+              to="/careers"
               :class="[
       'block py-2 px-3 transition ease-in-out duration-300 hover:border-b-2 hover:border-blue-700',
   isActive('/career'),
   isScrolled ? 'text-white' : 'text-black',
     ]"
-              >Career</NuxtLink
+              >Careers</NuxtLink
             >
           </li>
           <li>

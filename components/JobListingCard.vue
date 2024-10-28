@@ -36,7 +36,7 @@
     </div>
     <div>
       <a
-        href="/detail-career"
+        href="/careers/detail"
         class="bg-gaws-base-color text-white font-medium px-4 py-2 rounded-md flex gap-1 items-center"
       >
         Apply Now

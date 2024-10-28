@@ -36,7 +36,7 @@
           the right person/talent for our team. Join us immediately!
         </p>
       </div>
-      <JobListing />
+      <JobListingCard />
     </section>
   </div>
 </template>
