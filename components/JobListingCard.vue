@@ -1,10 +1,14 @@
+<script setup>
+const props = defineProps(['title'])
+</script>
+
 <template>
   <div
     class="bg-slate-200 shadow-xl shadow-gray-100 w-full max-w-4xl flex flex-col sm:flex-row gap-3 sm:items-center justify-between px-5 py-4 rounded-md mx-auto"
   >
     <div>
       <span class="text-purple-800 text-sm">Engineering</span>
-      <h3 class="font-bold mt-px">Senior Full Stack Backend Engineer</h3>
+      <h3 class="font-bold mt-px">{{ props.title }}</h3>
       <div class="flex items-center gap-3 mt-2">
         <span
           class="bg-purple-100 text-purple-700 rounded-full px-3 py-1 text-sm"

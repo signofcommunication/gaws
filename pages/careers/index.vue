@@ -36,7 +36,11 @@
           the right person/talent for our team. Join us immediately!
         </p>
       </div>
-      <JobListingCard />
+      <ul>
+        <li v-for="job in jobs" :key="job.id">
+          <JobListingCard :title="job.title" />
+        </li>
+      </ul>
     </section>
   </div>
 </template>
@@ -56,6 +60,9 @@
 <script setup>
 import gsap from 'gsap';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
+import { onMounted, ref } from 'vue';
+
+const jobs = ref([])
 
 gsap.registerPlugin(ScrollToPlugin);
 
@@ -66,4 +73,14 @@ const scrollToSelection = (selector) => {
     ease: 'power1.inOut',
   });
 };
+
+
+onMounted(async () => {
+    try {
+        const response = await fetch('/jobs.json')
+        jobs.value = await response.json()
+    } catch (e) {
+        console.error('Error fetching job listings:', error);
+    }
+})
 </script>
