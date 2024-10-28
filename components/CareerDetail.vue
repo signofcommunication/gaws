@@ -75,8 +75,7 @@
           <div class="mt-6 md:mt-0">
             <button
               @click="showApplyModal = true"
-              class="w-full md:w-auto bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 
-                           transition-colors font-medium"
+              class="w-full md:w-auto bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium"
             >
               Apply Now
             </button>
@@ -86,7 +85,6 @@
     </header>
 
     <!-- Main Content -->
-
     <main class="container mx-auto px-4 py-12 border flex justify-center">
       <div class="flex flex-col lg:flex-row gap-8 max-w-6xl w-full">
         <!-- Job Details -->
@@ -192,87 +190,59 @@
   </section>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      showApplyModal: false,
-      application: {
-        name: '',
-        email: '',
-        phone: '',
-        coverLetter: '',
-        resume: null
-      },
-      job: {
-        id: 1,
-        title: 'Senior Frontend Developer',
-        department: 'Engineering',
-        location: 'Remote',
-        type: 'Full-time',
-        salary: '$120,000 - $160,000',
-        description: 'We are seeking an experienced Frontend Developer to join our engineering team. You will be responsible for building and maintaining high-quality web applications using modern JavaScript frameworks.',
-        responsibilities: [
-          'Develop new user-facing features using Vue.js',
-          'Build reusable components and libraries for future use',
-          'Translate designs and wireframes into high-quality code',
-          'Optimize applications for maximum speed and scalability',
-          'Collaborate with backend developers and designers'
-        ],
-        requirements: [
-          '5+ years of experience in frontend development',
-          'Strong proficiency in JavaScript, HTML5, and CSS3',
-          'Experience with Vue.js and modern frontend frameworks',
-          'Understanding of server-side CSS preprocessing',
-          'Familiarity with RESTful APIs and modern frontend best practices',
-          'Strong problem-solving skills and attention to detail'
-        ],
-        companyDescription: 'We are a fast-growing technology company focused on building innovative solutions that transform how businesses operate.',
-        benefits: [
-          'Competitive salary and equity',
-          'Health, dental, and vision insurance',
-          'Unlimited PTO',
-          'Remote work options',
-          '401(k) with company match',
-          'Professional development budget'
-        ]
-      },
-      similarJobs: [
-        {
-          id: 2,
-          title: 'Frontend Developer',
-          location: 'New York, NY'
-        },
-        {
-          id: 3,
-          title: 'Full Stack Developer',
-          location: 'Remote'
-        },
-        {
-          id: 4,
-          title: 'UI Engineer',
-          location: 'San Francisco, CA'
-        }
-      ]
-    }
-  },
-  methods: {
-    handleFileUpload(event) {
-      this.application.resume = event.target.files[0]
-    },
-    submitApplication() {
-      // Handle application submission
-      console.log('Application submitted:', this.application)
-      this.showApplyModal = false
-      // Reset form
-      this.application = {
-        name: '',
-        email: '',
-        phone: '',
-        coverLetter: '',
-        resume: null
-      }
-    }
-  }
-}
+<script setup>
+import { ref } from 'vue';
+
+// Reactive variables
+const showApplyModal = ref(false);
+const application = ref({
+  name: '',
+  email: '',
+  phone: '',
+  coverLetter: '',
+  resume: null
+});
+const job = ref({
+  id: 1,
+  title: 'Senior Frontend Developer',
+  department: 'Engineering',
+  location: 'Remote',
+  type: 'Full-time',
+  salary: '$120,000 - $160,000',
+  description:
+    'We are seeking an experienced Frontend Developer to join our engineering team. You will be responsible for building and maintaining high-quality web applications using modern JavaScript frameworks.',
+  responsibilities: [
+    'Develop new user-facing features using Vue.js',
+    'Build reusable components and libraries for future use',
+    'Translate designs and wireframes into high-quality code',
+    'Optimize applications for maximum speed and scalability',
+    'Collaborate with backend developers and designers'
+  ],
+  requirements: [
+    '5+ years of experience in frontend development',
+    'Strong proficiency in JavaScript, HTML5, and CSS3',
+    'Experience with Vue.js and modern frontend frameworks',
+    'Understanding of server-side CSS preprocessing',
+    'Familiarity with RESTful APIs'
+  ],
+  companyDescription:
+    'Tech Company is a leading provider of innovative software solutions. We strive to create a culture of collaboration and creativity.',
+  benefits: [
+    'Competitive salary and performance bonuses',
+    'Health insurance and wellness programs',
+    'Flexible working hours',
+    'Opportunities for professional development',
+    'Team-building events and activities'
+  ]
+});
+
+// Functions to handle modal and form submission
+const handleApplyClick = () => {
+  showApplyModal.value = true;
+};
+
+const handleFormSubmit = () => {
+  // Handle form submission logic
+  console.log('Application submitted:', application.value);
+};
 </script>
