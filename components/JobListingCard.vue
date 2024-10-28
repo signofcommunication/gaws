@@ -1,18 +1,18 @@
 <script setup>
-const props = defineProps(['title'])
+const props = defineProps(['title','department','location','type'])
 </script>
 
 <template>
   <div
-    class="bg-slate-200 shadow-xl shadow-gray-100 w-full max-w-4xl flex flex-col sm:flex-row gap-3 sm:items-center justify-between px-5 py-4 rounded-md mx-auto"
+    class="bg-slate-200 shadow-xl shadow-gray-100 w-full max-w-4xl flex flex-col sm:flex-row gap-3 sm:items-center justify-between px-5 py-4 my-4 rounded-md mx-auto"
   >
     <div>
-      <span class="text-purple-800 text-sm">Engineering</span>
+      <span class="text-purple-800 text-sm">{{props.department}}</span>
       <h3 class="font-bold mt-px">{{ props.title }}</h3>
       <div class="flex items-center gap-3 mt-2">
         <span
           class="bg-purple-100 text-purple-700 rounded-full px-3 py-1 text-sm"
-          >Full-time</span
+          >{{ props.type }}</span
         >
         <span class="text-slate-600 text-sm flex gap-1 items-center">
           <svg
@@ -34,7 +34,7 @@ const props = defineProps(['title'])
               d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
             />
           </svg>
-          Remote, Indonesia
+          {{ props.location }}, Indonesia
         </span>
       </div>
     </div>

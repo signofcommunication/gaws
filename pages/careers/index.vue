@@ -38,7 +38,12 @@
       </div>
       <ul>
         <li v-for="job in jobs" :key="job.id">
-          <JobListingCard :title="job.title" />
+          <JobListingCard
+            :title="job.title"
+            :location="job.location"
+            :department="job.department"
+            :type="job.type"
+          />
         </li>
       </ul>
     </section>
