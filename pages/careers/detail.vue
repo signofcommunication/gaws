@@ -1,5 +1,3 @@
 <template>
-  <div class="mt-8">
-    <CareerDetail />
-  </div>
+  <CareerDetail />
 </template>

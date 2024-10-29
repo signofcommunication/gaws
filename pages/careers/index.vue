@@ -43,6 +43,7 @@
             :location="job.location"
             :department="job.department"
             :type="job.type"
+            :id="job.id"
           />
         </li>
       </ul>

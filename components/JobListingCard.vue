@@ -1,5 +1,5 @@
 <script setup>
-const props = defineProps(['title','department','location','type'])
+const props = defineProps(['title','department','location','type','id'])
 </script>
 
 <template>
@@ -39,8 +39,8 @@ const props = defineProps(['title','department','location','type'])
       </div>
     </div>
     <div>
-      <a
-        href="/careers/detail"
+      <NuxtLink
+        :to="`/careers/${props.id}`"
         class="bg-gaws-base-color text-white font-medium px-4 py-2 rounded-md flex gap-1 items-center"
       >
         Apply Now
@@ -58,7 +58,7 @@ const props = defineProps(['title','department','location','type'])
             d="M13 7l5 5m0 0l-5 5m5-5H6"
           />
         </svg>
-      </a>
+      </NuxtLink>
     </div>
   </div>
 </template>
