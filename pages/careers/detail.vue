@@ -1,3 +1,0 @@
-<template>
-  <CareerDetail />
-</template>
