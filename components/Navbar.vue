@@ -1,12 +1,12 @@
 <template>
   <nav
-    :class="[
+    :class="[ 
       'fixed w-full top-0 transition-colors duration-300 z-50',
       isScrolled ? 'bg-gaws-base-color' : 'bg-gaws-white'
     ]"
   >
     <div
-      class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 "
+      class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
     >
       <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
         <img src="/assets/gaws-logo.png" class="h-26" alt="Gaws Logo" />
@@ -51,10 +51,10 @@
             <NuxtLink
               to="/"
               :class="[
-                  'block py-2 px-3 transition ease-in-out duration-300 hover:border-b-2 hover:border-blue-700',
-                  isActive('/services'),
-                   isScrolled ? 'text-white' : 'text-black',
-                  ]"
+                'block py-2 px-3 transition ease-in-out duration-300 hover:border-b-2 hover:border-blue-700',
+                isActive('/'),
+                isScrolled ? 'text-white' : 'text-black'
+              ]"
               >Home</NuxtLink
             >
           </li>
@@ -62,22 +62,21 @@
             <NuxtLink
               to="/services"
               :class="[
-                  'block py-2 px-3 transition ease-in-out duration-300 hover:border-b-2 hover:border-blue-700',
-                  isActive('/services'),
-                   isScrolled ? 'text-white' : 'text-black',
-                  ]"
+                'block py-2 px-3 transition ease-in-out duration-300 hover:border-b-2 hover:border-blue-700',
+                isActive('/services'),
+                isScrolled ? 'text-white' : 'text-black'
+              ]"
               >Services</NuxtLink
             >
           </li>
-
           <li>
             <NuxtLink
               to="/about"
               :class="[
-      'block py-2 px-3 transition ease-in-out duration-300 hover:border-b-2 hover:border-blue-700',
-  isActive('/about'),
-  isScrolled ? 'text-white' : 'text-black',
-    ]"
+                'block py-2 px-3 transition ease-in-out duration-300 hover:border-b-2 hover:border-blue-700',
+                isActive('/about'),
+                isScrolled ? 'text-white' : 'text-black'
+              ]"
               >About Us</NuxtLink
             >
           </li>
@@ -85,10 +84,10 @@
             <NuxtLink
               to="/careers"
               :class="[
-      'block py-2 px-3 transition ease-in-out duration-300 hover:border-b-2 hover:border-blue-700',
-  isActive('/career'),
-  isScrolled ? 'text-white' : 'text-black',
-    ]"
+                'block py-2 px-3 transition ease-in-out duration-300 hover:border-b-2 hover:border-blue-700',
+                isActive('/careers'),
+                isScrolled ? 'text-white' : 'text-black'
+              ]"
               >Careers</NuxtLink
             >
           </li>
@@ -96,10 +95,10 @@
             <NuxtLink
               to="/blog"
               :class="[
-      'block py-2 px-3 transition ease-in-out duration-300 hover:border-b-2 hover:border-blue-700',
-  isActive('/blog'),
-  isScrolled ? 'text-white' : 'text-black',
-    ]"
+                'block py-2 px-3 transition ease-in-out duration-300 hover:border-b-2 hover:border-blue-700',
+                isActive('/blog'),
+                isScrolled ? 'text-white' : 'text-black'
+              ]"
               >Blog</NuxtLink
             >
           </li>
@@ -107,10 +106,10 @@
             <NuxtLink
               to="/contact-us"
               :class="[
-      'block py-2 px-3 transition ease-in-out duration-300 hover:border-b-2 hover:border-blue-700',
-  isActive('/contact-us'),
-  isScrolled ? 'text-white' : 'text-black',
-    ]"
+                'block py-2 px-3 transition ease-in-out duration-300 hover:border-b-2 hover:border-blue-700',
+                isActive('/contact-us'),
+                isScrolled ? 'text-white' : 'text-black'
+              ]"
               >Contact Us</NuxtLink
             >
           </li>
@@ -124,16 +123,16 @@
 import { ref, onMounted, onUnmounted } from 'vue';
 import { useRoute } from 'vue-router';
 
-// Define a reactive state for menu open/close
+// Define reactive states for menu open/close and scroll detection
 const isMenuOpen = ref(false);
-const isScrolled = ref(false); // Reactive state for scroll detection
+const isScrolled = ref(false);
 
-// Toggle function to show/hide the menu
+// Toggle function for mobile menu
 const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value;
 };
 
-// Use vue-router's useRoute to check the current route
+// Use vue-router's useRoute to check the current route for active link
 const route = useRoute();
 
 // Function to add underline when the route matches
@@ -143,16 +142,15 @@ const isActive = (path) => {
     : 'text-gray-900';
 };
 
-// Scroll event listener to detect if navbar should have background color
+// Scroll event listener to change navbar background on scroll
 const handleScroll = () => {
-  isScrolled.value = window.scrollY > 50; // Adjust scroll position as needed
+  isScrolled.value = window.scrollY > 50; // Adjust scroll position threshold if needed
 };
 
-// Register scroll event listener when component mounts and remove it when it unmounts
+// Register scroll event listener when component mounts and remove on unmount
 onMounted(() => {
   window.addEventListener('scroll', handleScroll);
 });
-
 onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll);
 });
@@ -160,10 +158,10 @@ onUnmounted(() => {
 
 <style scoped>
 .bg-gaws-white {
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
 }
 
 .bg-gaws-base-color {
-  background-color: #070051;
+  background-color: #070051; /* Solid color on scroll */
 }
 </style>
