@@ -21,7 +21,7 @@
   </section>
 
   <!-- Cards Section -->
-  <div class="container mx-auto px-6 relative">
+  <div class="max-w-screen-xl container mx-auto px-6 relative">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 ">
       <!-- Card 1 -->
       <div

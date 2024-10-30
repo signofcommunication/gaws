@@ -4,7 +4,7 @@
       <div
         v-for="(list, index) in servicesList"
         :key="index"
-        class="flex flex-col lg:flex-row lg:gap-12 mb-12"
+        class="flex flex-col lg:flex-row lg:gap-12 mb-16 lg:mb-24"
       >
         <!-- Text Content -->
         <div
@@ -13,6 +13,7 @@
             'lg:w-5/12': index % 2 !== 0,
             'w-full': true,
           }"
+          class="mb-8 lg:mb-0"
         >
           <h1
             class="mb-6 text-3xl font-extrabold tracking-tight leading-tight md:text-4xl xl:text-5xl dark:text-black"
@@ -53,6 +54,7 @@
             'lg:w-5/12 lg:flex lg:order-first mr-auto': index % 2 !== 0,
             'w-full': true,
           }"
+          class="mb-8 lg:mb-0"
         >
           <img
             :src="list.image"
@@ -66,26 +68,56 @@
 </template>
 
 <script setup>
+import education from '../assets/Services/educational solutions.png'
+import industrial from '../assets/Services/Industrial Solutions.png'
+import embedded from '../assets/Services/embedded systems.png'
+import manufacturing from '../assets/Services/manufacturing solutions.png'
+
 const servicesList = [
   {
-    title: 'Service 1',
-    description: 'Description of Service 1',
-    image: 'https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/phone-mockup.png',
+    title: 'Industrial Solutions',
+    description: 'Since 2011, we got some experiences in multiple industries in Indonesia and SEA Region, from Financial Institutions to Education. See our industries experience and use case for more information:',
+    image: industrial,
   },
   {
-    title: 'Service 2',
-    description: 'Description of Service 2',
-    image: 'https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/phone-mockup.png',
+    title: 'Embedded Systems',
+    description: 'Since 2011, we got some experiences in multiple industries in Indonesia and SEA Region, from Financial Institutions to Education. See our industries experience and use case for more information:',
+    image: embedded,
   },
   {
-    title: 'Service 3',
-    description: 'Description of Service 3',
-    image: 'https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/phone-mockup.png',
+    title: 'Educational Solutions',
+    description: 'Since 2011, we got some experiences in multiple industries in Indonesia and SEA Region, from Financial Institutions to Education. See our industries experience and use case for more information:',
+    image: education,
   },
   {
-    title: 'Service 4',
-    description: 'Description of Service 4',
-    image: 'https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/phone-mockup.png',
+    title: 'Manufacturing Solutions',
+    description: 'Since 2011, we got some experiences in multiple industries in Indonesia and SEA Region, from Financial Institutions to Education. See our industries experience and use case for more information:',
+    image: manufacturing,
+  },
+  {
+    title: 'Finance Solutions',
+    description: 'Since 2011, we got some experiences in multiple industries in Indonesia and SEA Region, from Financial Institutions to Education. See our industries experience and use case for more information:',
+    image: manufacturing,
+  },
+  {
+    title: 'Sales & Marketing Solutions',
+    description: 'Service Solutions',
+    image: manufacturing,
+  },
+  {
+    title: 'RFID Solutions',
+    description: 'Since 2011, we got some experiences in multiple industries in Indonesia and SEA Region, from Financial Institutions to Education. See our industries experience and use case for more information:',
+    image: manufacturing,
+  },
+  {
+    title: 'Telecommunication Solutions',
+    description: 'Since 2011, we got some experiences in multiple industries in Indonesia and SEA Region, from Financial Institutions to Education. See our industries experience and use case for more information:',
+    image: manufacturing,
+  },
+  {
+    title: 'Integration',
+    description: 'Since 2011, we got some experiences in multiple industries in Indonesia and SEA Region, from Financial Institutions to Education. See our industries experience and use case for more information:',
+    image: manufacturing,
   },
 ];
 </script>
