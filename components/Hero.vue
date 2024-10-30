@@ -28,6 +28,7 @@
           <div class="flex flex-wrap gap-4">
             <a
               href="#"
+              @click.prevent="handleGetStarted(list.title)"
               class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-white bg-primary-700 rounded-lg hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900"
             >
               Get started
@@ -47,7 +48,7 @@
           </div>
         </div>
 
-        <!-- Image Content -->
+        <!-- Image Content remains the same -->
         <div
           :class="{
             'lg:w-5/12 lg:flex ml-auto': index % 2 === 0,
@@ -72,6 +73,17 @@ import education from '../assets/Services/educational solutions.png'
 import industrial from '../assets/Services/Industrial Solutions.png'
 import embedded from '../assets/Services/embedded systems.png'
 import manufacturing from '../assets/Services/manufacturing solutions.png'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+
+const handleGetStarted = (service) => {
+  // Navigate to form page with the selected service as a query parameter
+  router.push({
+    path: '/contact-us', // Update this path to match your actual form route
+    query: { service: service }
+  })
+}
 
 const servicesList = [
   {

@@ -155,12 +155,6 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: "SolutionsSection",
-};
-</script>
-
 <style scoped>
 #header-services {
   height: 50vh;

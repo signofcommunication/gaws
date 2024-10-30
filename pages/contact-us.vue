@@ -108,9 +108,6 @@
                       Working hours
                     </h3>
                     <p class="text-gray-600">Monday - Friday: 08:00 - 17:00</p>
-                    <p class="text-gray-600">
-                      Saturday & Sunday: 08:00 - 12:00
-                    </p>
                   </div>
                 </li>
               </ul>
@@ -125,7 +122,7 @@
                     <div class="mx-0 mb-1 sm:mb-4">
                       <label
                         for="name"
-                        class="pb-1 text-xs uppercase tracking-wider"
+                        class="pb-1 text-xs uppercase tracking-wider text-black"
                         >Name</label
                       >
                       <input
@@ -133,14 +130,14 @@
                         id="name"
                         v-model="formData.name"
                         placeholder="Your name"
-                        class="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"
+                        class="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-900 sm:mb-0"
                         name="name"
                       />
                     </div>
                     <div class="mx-0 mb-1 sm:mb-4">
                       <label
                         for="email"
-                        class="pb-1 text-xs uppercase tracking-wider"
+                        class="pb-1 text-xs uppercase tracking-wider text-black"
                         >Email</label
                       >
                       <input
@@ -148,14 +145,35 @@
                         id="email"
                         v-model="formData.email"
                         placeholder="Your email address"
-                        class="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"
+                        class="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-900 sm:mb-0"
                         name="email"
                       />
                     </div>
                     <div class="mx-0 mb-1 sm:mb-4">
                       <label
+                        for="service"
+                        class="pb-1 text-xs uppercase tracking-wider text-black"
+                        >Select Service</label
+                      >
+                      <select
+                        id="service"
+                        v-model="formData.service"
+                        class="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-900 sm:mb-0"
+                      >
+                        <option disabled value="">Select a service</option>
+                        <option
+                          v-for="service in servicesList"
+                          :key="service.title"
+                          :value="service.title"
+                        >
+                          {{ service.title }}
+                        </option>
+                      </select>
+                    </div>
+                    <div class="mx-0 mb-1 sm:mb-4">
+                      <label
                         for="textarea"
-                        class="pb-1 text-xs uppercase tracking-wider"
+                        class="pb-1 text-xs uppercase tracking-wider text-black"
                         >Message</label
                       >
                       <textarea
@@ -164,7 +182,7 @@
                         cols="30"
                         rows="5"
                         placeholder="Write your message..."
-                        class="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"
+                        class="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-900 sm:mb-0"
                       ></textarea>
                     </div>
                   </div>
@@ -219,12 +237,67 @@
 </template>
 
 <script setup>
-  import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
+import { useRoute } from 'vue-router';
 
-// Define the form data
+const route = useRoute()
+
 const formData = ref({
   name: '',
   email: '',
+  service: '',
   message: ''
 });
+
+onMounted(() => {
+  const serviceFromQuery = route.query.service
+
+  if (route.query.service) {
+    formData.value.service = route.query.service
+  }
+})
+
+const servicesList = [
+  {
+    title: 'Industrial Solutions',
+    description: 'Since 2011, we got some experiences in multiple industries in Indonesia and SEA Region, from Financial Institutions to Education. See our industries experience and use case for more information:',
+  },
+  {
+    title: 'Embedded Systems',
+    description: 'Since 2011, we got some experiences in multiple industries in Indonesia and SEA Region, from Financial Institutions to Education. See our industries experience and use case for more information:',
+  },
+  {
+    title: 'Educational Solutions',
+    description: 'Since 2011, we got some experiences in multiple industries in Indonesia and SEA Region, from Financial Institutions to Education. See our industries experience and use case for more information:',
+  },
+  {
+    title: 'Manufacturing Solutions',
+    description: 'Since 2011, we got some experiences in multiple industries in Indonesia and SEA Region, from Financial Institutions to Education. See our industries experience and use case for more information:',
+  },
+  {
+    title: 'Finance Solutions',
+    description: 'Since 2011, we got some experiences in multiple industries in Indonesia and SEA Region, from Financial Institutions to Education. See our industries experience and use case for more information:',
+  },
+  {
+    title: 'Sales & Marketing Solutions',
+    description: 'Service Solutions',
+  },
+  {
+    title: 'RFID Solutions',
+    description: 'Since 2011, we got some experiences in multiple industries in Indonesia and SEA Region, from Financial Institutions to Education. See our industries experience and use case for more information:',
+  },
+  {
+    title: 'Telecommunication Solutions',
+    description: 'Since 2011, we got some experiences in multiple industries in Indonesia and SEA Region, from Financial Institutions to Education. See our industries experience and use case for more information:',
+  },
+  {
+    title: 'Integration',
+    description: 'Since 2011, we got some experiences in multiple industries in Indonesia and SEA Region, from Financial Institutions to Education. See our industries experience and use case for more information:',
+  },
+];
+
+const handleSubmit = () => {
+  // Handle the form submission
+  console.log(formData.value);
+};
 </script>
