@@ -49,6 +49,17 @@
         >
           <li>
             <NuxtLink
+              to="/"
+              :class="[
+                  'block py-2 px-3 transition ease-in-out duration-300 hover:border-b-2 hover:border-blue-700',
+                  isActive('/services'),
+                   isScrolled ? 'text-white' : 'text-black',
+                  ]"
+              >Home</NuxtLink
+            >
+          </li>
+          <li>
+            <NuxtLink
               to="/services"
               :class="[
                   'block py-2 px-3 transition ease-in-out duration-300 hover:border-b-2 hover:border-blue-700',
