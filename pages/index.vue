@@ -7,7 +7,7 @@
     <div class="absolute inset-0 bg-black opacity-50"></div>
 
     <div
-      class="relative container mx-auto text-white h-full flex flex-col justify-center p-4"
+      class="relative container max-w-screen-xl mx-auto text-white h-full flex flex-col justify-center p-4"
     >
       <!-- Responsive Heading -->
       <h1
