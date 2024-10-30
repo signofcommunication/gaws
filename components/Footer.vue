@@ -20,40 +20,6 @@
             <h2
               class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"
             >
-              Services
-            </h2>
-            <ul class="text-gray-500 dark:text-gray-400 font-medium">
-              <li class="mb-4">
-                <a href="https://flowbite.com/" class="hover:underline"
-                  >Web Development</a
-                >
-              </li>
-              <li class="mb-4">
-                <a href="https://tailwindcss.com/" class="hover:underline"
-                  >RFID Solution</a
-                >
-              </li>
-              <li class="mb-4">
-                <a href="https://tailwindcss.com/" class="hover:underline"
-                  >Desktop Application</a
-                >
-              </li>
-              <li class="mb-4">
-                <a href="https://tailwindcss.com/" class="hover:underline"
-                  >Embedded Systems</a
-                >
-              </li>
-              <li class="mb-4">
-                <a href="https://tailwindcss.com/" class="hover:underline"
-                  >n-Tier(Web Apps)</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h2
-              class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"
-            >
               About
             </h2>
             <ul class="text-gray-500 dark:text-gray-400 font-medium">
