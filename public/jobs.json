@@ -1,11 +1,10 @@
 [
   {
-    "id": 2,
-    "title": "Senior backend Developer",
-    "department": "Architecture Design",
-    "location": "Hybrid",
-    "type": "Part-time",
-    "salary": "$120,000 - $160,000",
+    "id": 1,
+    "title": "FullStack Developer",
+    "department": "Engineering",
+    "location": "Onsite",
+    "type": "Full-time",
     "description": "We are seeking an experienced Frontend Developer to join our engineering team. You will be responsible for building and maintaining high-quality web applications using modern JavaScript frameworks.",
     "responsibilities": [
       "Develop new user-facing features using Vue.js",
@@ -31,12 +30,11 @@
     ]
   },
   {
-    "id": 1,
-    "title": "Senior Frontend Developer",
+    "id": 2,
+    "title": "System Analyst",
     "department": "Engineering",
-    "location": "Remote",
+    "location": "Onsite",
     "type": "Full-time",
-    "salary": "$120,000 - $160,000",
     "description": "We are seeking an experienced Frontend Developer to join our engineering team. You will be responsible for building and maintaining high-quality web applications using modern JavaScript frameworks.",
     "responsibilities": [
       "Develop new user-facing features using Vue.js",
