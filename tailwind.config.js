@@ -29,7 +29,7 @@ export default {
           900: "#1e3a8a",
           950: "#172554",
         },
-        "gaws-base-color": "#070051",
+        "gaws-base-color": "hsl(239, 100%, 35%)",
         "gaws-secondary-color": "45474B",
       },
       fontFamily: {

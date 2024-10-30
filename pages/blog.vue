@@ -1,19 +1,19 @@
 <template>
-  <section class=" pt-24">
+  <section class=" pt-24 bg-gaws-base-color">
     <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
       <div class="mx-auto max-w-screen-sm text-center lg:mb-16 mb-8">
         <h2
-          class="mb-4 text-3xl lg:text-4xl tracking-tight font-extrabold text-black"
+          class="mb-4 text-3xl lg:text-4xl tracking-tight font-extrabold text-white"
         >
           Our Blog
         </h2>
-        <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400">
+        <p class="font-light text-white sm:text-xl">
           We use an agile approach to test assumptions and connect with the
           needs of your audience early and often.
         </p>
       </div>
       <div class="text-center">
-        <h1 class="text-3xl">Coming Soon.....</h1>
+        <h1 class="text-3xl text-white">Coming Soon.....</h1>
         <!-- <article
           class="p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
         >
