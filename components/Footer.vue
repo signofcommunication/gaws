@@ -27,14 +27,10 @@
             </h2>
             <ul class="text-gray-500 dark:text-gray-400 font-medium">
               <li class="mb-4">
-                <a
-                  href="https://github.com/themesberg/flowbite"
-                  class="hover:underline"
-                  >Our Story</a
-                >
+                <a href="/about" class="hover:underline">Our Story</a>
               </li>
               <li class="mb-4">
-                <a href="https://discord.gg/4eeurUVvTy" class="hover:underline"
+                <a href="/about/#vision-mission" class="hover:underline"
                   >Visi & Misi Perusahaan</a
                 >
               </li>
