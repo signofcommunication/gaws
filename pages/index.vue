@@ -19,8 +19,8 @@
       <p class="my-4 sm:my-6 text-sm sm:text-base md:text-lg">
         Our mission is to deliver IT solutions that enhance product quality,
         <br />
-        streamline processes, and empower quick,<br />
-        strategic decisions—driving efficiency and growth for your business.
+        streamline processes, and empower quick, strategic decisions—driving
+        efficiency and growth for your business.
       </p>
 
       <!-- Responsive Button -->
