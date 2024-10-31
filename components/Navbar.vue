@@ -70,11 +70,9 @@
 import { ref, onMounted, onUnmounted, computed } from 'vue';
 import { useRoute } from 'vue-router';
 
-// Define reactive states for menu open/close and scroll detection
 const isMenuOpen = ref(false);
 const isScrolled = ref(false);
 
-// Array of navigation links
 const navLinks = [
   { name: 'Home', path: '/' },
   { name: 'Services', path: '/services' },
@@ -84,15 +82,12 @@ const navLinks = [
   { name: 'Contact Us', path: '/contact-us' },
 ];
 
-// Toggle function for mobile menu
 const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value;
 };
 
-// Use vue-router's useRoute to check the current route for active link
 const route = useRoute();
 
-// Function to add underline when the route matches
 const isActive = (path) => {
   return route.path === path
     ? 'text-blue-700 border-b-2 border-blue-700'
@@ -104,12 +99,16 @@ const handleScroll = () => {
   isScrolled.value = window.scrollY > 50; // Adjust scroll position threshold if needed
 };
 
-// Computed property to determine text color based on background
+// Computed property to determine text color based on path and background
 const textColorClass = computed(() => {
-  return isScrolled.value ? 'text-black' : 'text-white text-opacity-80'; // Change colors as needed
+  if (route.path === '/about' || route.path === '/contact-us') {
+    return 'text-black';
+  } else {
+    return isScrolled.value ? 'text-black' : 'text-lime-50';
+  }
 });
 
-// // Register scroll event listener when component mounts and remove on unmount
+// Register scroll event listener when component mounts and remove on unmount
 onMounted(() => {
   window.addEventListener('scroll', handleScroll);
 });
@@ -120,10 +119,10 @@ onUnmounted(() => {
 
 <style scoped>
 .bg-gaws-transparent {
-  background-color: rgba(255, 255, 255, 0); /* Semi-transparent white */
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
 .bg-gaws-white-opacity {
-  background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white */
+  background-color: rgba(255, 255, 255, 0.5);
 }
 </style>
