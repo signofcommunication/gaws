@@ -1,3 +1,9 @@
+<script setup>
+useSeoMeta({
+    title: "Services",
+})
+</script>
+
 <template>
   <section class="bg-gaws-base-color py-16">
     <!-- Header Section -->
@@ -157,16 +163,16 @@
 
 <style scoped>
 #header-services {
-  height: 50vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .services-card {
-  /* transform: translateY(-20%); */
-  position: relative;
-  top: -20%;
+    /* transform: translateY(-20%); */
+    position: relative;
+    top: -20%;
 }
 </style>

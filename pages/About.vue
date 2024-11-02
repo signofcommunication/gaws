@@ -200,9 +200,9 @@ onBeforeUnmount(() => {
 </template>
 
 <style scoped>
-#vision-mission {
+/* #vision-mission {
     background-color: #FFFBF5;
-}
+} */
 
 .mission,
 .vision {
