@@ -50,6 +50,7 @@
         >
           <li v-for="(link, index) in navLinks" :key="index">
             <NuxtLink
+              @click="scrollToTop"
               :to="link.path"
               :class="[ 
                 'block py-2 px-3 transition ease-in-out duration-300 hover:border-b-2 hover:border-blue-700', 
@@ -98,6 +99,11 @@ const isActive = (path) => {
 const handleScroll = () => {
   isScrolled.value = window.scrollY > 50; // Adjust scroll position threshold if needed
 };
+
+// Scroll to top
+const scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior:'smooth' });
+}
 
 // Computed property to determine text color based on path and background
 const textColorClass = computed(() => {
