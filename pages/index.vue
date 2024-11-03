@@ -60,7 +60,7 @@
 
     <a
       href="/services"
-      class="text-white bg-purple-700 hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-xl px-5 py-2.5 text-center mt-10 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900"
+      class=" text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 z-20 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-xl px-5 py-2.5 text-center mt-10 mb-2"
     >
       View More
     </a>
@@ -97,22 +97,22 @@ gsap.registerPlugin(TextPlugin)
 const servicesImages = [{
         title: 'Education Solutions',
         logo: graduationCapLogo,
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse gravida viverra vestibulum. Aenean eros tortor, sagittis id lorem quis, auctor facilisis nunc.'
+        description: 'Developing e-learning platforms and digital tools to enhance engagement, interaction, and the effectiveness of learning experiences.'
     },
     {
         title: 'Embedded Systems',
         logo: processorLogo,
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse gravida viverra vestibulum. Aenean eros tortor, sagittis id lorem quis, auctor facilisis nunc.'
+        description: 'Providing customized embedded systems development for smart devices, automation, and the Internet of Things (IoT).'
     },
     {
         title: 'Industrial Solutions',
         logo: gearsLogo,
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse gravida viverra vestibulum. Aenean eros tortor, sagittis id lorem quis, auctor facilisis nunc.'
+        description: 'Industrial software solutions that automate workflows, minimize risks, and significantly boost productivity.'
     },
     {
         title: 'Manufacturing Solutions',
         logo: deploymentLogo,
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse gravida viverra vestibulum. Aenean eros tortor, sagittis id lorem quis, auctor facilisis nunc.'
+        description: 'Delivering smart manufacturing solutions with real-time monitoring, resource optimization, and enhanced efficiency.'
     }
 ];
 

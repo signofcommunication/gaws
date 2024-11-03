@@ -70,8 +70,9 @@ useSeoMeta({
         </div>
         <h3 class="font-semibold text-lg">Education Solutions</h3>
         <p class="mt-2 text-gray-600">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          et metus id eros porta vehicula.
+          Developing e-learning platforms and digital tools to enhance
+          engagement, interaction, and the effectiveness of learning
+          experiences.
         </p>
       </div>
 
@@ -98,8 +99,8 @@ useSeoMeta({
         </div>
         <h3 class="font-semibold text-lg">Embedded Systems</h3>
         <p class="mt-2 text-gray-600">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          et metus id eros porta vehicula.
+          Providing customized embedded systems development for smart devices,
+          automation, and the Internet of Things (IoT).
         </p>
       </div>
 
@@ -124,8 +125,8 @@ useSeoMeta({
         </div>
         <h3 class="font-semibold text-lg">Manufacture Solutions</h3>
         <p class="mt-2 text-gray-600">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          et metus id eros porta vehicula.
+          Industrial software solutions that automate workflows, minimize risks,
+          and significantly boost productivity.
         </p>
       </div>
 
@@ -152,8 +153,8 @@ useSeoMeta({
         </div>
         <h3 class="font-semibold text-lg">Industrial Solutions</h3>
         <p class="mt-2 text-gray-600">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          et metus id eros porta vehicula.
+          Delivering smart manufacturing solutions with real-time monitoring,
+          resource optimization, and enhanced efficiency.
         </p>
       </div>
     </div>
