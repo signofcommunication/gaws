@@ -88,47 +88,47 @@ const handleGetStarted = (service) => {
 const servicesList = [
   {
     title: 'Industrial Solutions',
-    description: 'Since 2011, we got some experiences in multiple industries in Indonesia and SEA Region, from Financial Institutions to Education. See our industries experience and use case for more information:',
+    description: 'Empowering industries with advanced software solutions that drive automation, improve operational efficiency, and ensure safety compliance across manufacturing, logistics, and beyond.',
     image: industrial,
   },
   {
     title: 'Embedded Systems',
-    description: 'Since 2011, we got some experiences in multiple industries in Indonesia and SEA Region, from Financial Institutions to Education. See our industries experience and use case for more information:',
+    description: 'Providing custom embedded system development for IoT devices, smart solutions, and automation, ensuring seamless integration and optimal performance in a connected world.',
     image: embedded,
   },
   {
     title: 'Educational Solutions',
-    description: 'Since 2011, we got some experiences in multiple industries in Indonesia and SEA Region, from Financial Institutions to Education. See our industries experience and use case for more information:',
+    description: 'Creating engaging and effective e-learning platforms and tools to enhance education, boost engagement, and provide innovative digital learning experiences.',
     image: education,
   },
   {
     title: 'Manufacturing Solutions',
-    description: 'Since 2011, we got some experiences in multiple industries in Indonesia and SEA Region, from Financial Institutions to Education. See our industries experience and use case for more information:',
+    description: 'Delivering robust manufacturing software solutions that optimize production, enable real-time monitoring, and streamline workflows to maximize output and reduce costs.',
     image: manufacturing,
   },
   {
     title: 'Finance Solutions',
-    description: 'Since 2011, we got some experiences in multiple industries in Indonesia and SEA Region, from Financial Institutions to Education. See our industries experience and use case for more information:',
+    description: 'Developing secure and compliant financial software for institutions, enabling efficient operations, streamlined transactions, and enhanced customer experiences.',
     image: manufacturing,
   },
   {
     title: 'Sales & Marketing Solutions',
-    description: 'Service Solutions',
+    description: 'Creating tools and platforms to enhance sales processes, improve marketing efficiency, and provide data-driven insights to support strategic business growth.',
     image: manufacturing,
   },
   {
     title: 'RFID Solutions',
-    description: 'Since 2011, we got some experiences in multiple industries in Indonesia and SEA Region, from Financial Institutions to Education. See our industries experience and use case for more information:',
+    description: 'Offering RFID technology solutions for asset tracking, inventory management, and security, enabling seamless data capture and management for smarter operations.',
     image: manufacturing,
   },
   {
     title: 'Telecommunication Solutions',
-    description: 'Since 2011, we got some experiences in multiple industries in Indonesia and SEA Region, from Financial Institutions to Education. See our industries experience and use case for more information:',
+    description: 'Providing reliable telecommunication software solutions to enhance connectivity, improve data security, and streamline operations for telecom providers.',
     image: manufacturing,
   },
   {
     title: 'Integration',
-    description: 'Since 2011, we got some experiences in multiple industries in Indonesia and SEA Region, from Financial Institutions to Education. See our industries experience and use case for more information:',
+    description: 'Specializing in seamless integration services to connect disparate systems, optimize data flow, and create unified solutions for enhanced business agility.',
     image: manufacturing,
   },
 ];
