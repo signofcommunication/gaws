@@ -130,4 +130,8 @@ onMounted(() => {
     delay: 0.1 // Optional delay before animation starts
   })
 })
+
+definePageMeta({
+  title: 'Gaws IT Solutions | Home',
+})
 </script>

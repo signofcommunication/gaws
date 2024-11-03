@@ -54,7 +54,7 @@
 }
 
 .animate-marquee {
-  animation: marquee 20s linear infinite;
+  animation: marquee 25s linear infinite;
   will-change: transform;
   width: fit-content;
   display: flex;
@@ -94,7 +94,7 @@
 /* Optional: Add smooth scaling when hovering */
 img:hover {
   transform: scale(1.05);
-  transition: transform 0.3s ease;
+  transition: transform 5s ease;
 }
 </style>
 
