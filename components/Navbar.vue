@@ -1,8 +1,8 @@
 <template>
   <nav
     :class="[
-      'fixed w-full top-0 transition-colors duration-300 z-50',
-      isScrolled ? 'bg-gaws-white-opacity' : 'bg-gaws-white-transparent',
+      'fixed w-full top-0 transition-all duration-300 z-50',
+      isScrolled ? 'bg-white/90' : 'bg-transparent',
       'backdrop-blur-sm',
     ]"
   >
@@ -17,7 +17,7 @@
       <button
         @click="toggleMenu"
         type="button"
-        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
         aria-controls="navbar-default"
         aria-expanded="false"
       >
@@ -46,16 +46,20 @@
         id="navbar-default"
       >
         <ul
-          class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 dark:border-gray-700"
+          class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0"
         >
           <li v-for="(link, index) in navLinks" :key="index">
             <NuxtLink
               @click="scrollToTop"
               :to="link.path"
-              :class="[ 
-                'font-medium block py-2 px-3 transition ease-in-out duration-300 hover:border-b-2 hover:border-blue-700', 
-                isActive(link.path), 
-                textColorClass 
+              class="block py-2 px-3 transition-all duration-300 z-50 hover:text-blue-700"
+              :class="[
+                'font-medium',
+                isActive(link.path),
+                {
+                  'text-black': isScrolled || route.path === '/' || route.path === '/contact-us',
+                  'text-white': !isScrolled && route.path !== '/' && route.path !== '/contact-us'
+                }
               ]"
             >
               {{ link.name }}
@@ -68,11 +72,12 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted, computed } from "vue";
+import { ref, onMounted, onUnmounted } from "vue";
 import { useRoute } from "vue-router";
 
 const isMenuOpen = ref(false);
 const isScrolled = ref(false);
+const route = useRoute();
 
 const navLinks = [
   { name: "Home", path: "/" },
@@ -87,35 +92,24 @@ const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value;
 };
 
-const route = useRoute();
-
 const isActive = (path) => {
-  return route.path === path ? "text-blue-700 border-b-2 border-blue-700" : "";
+  return route.path === path ? "border-b-2 border-blue-700 text-blue-700" : "";
 };
 
-// Scroll event listener to change navbar background on scroll
-const handleScroll = () => {
-  isScrolled.value = window.scrollY > 50; // Adjust scroll position threshold if needed
-};
-
-// Scroll to top
 const scrollToTop = () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 };
 
-// Computed property to determine text color based on path and background
-const textColorClass = computed(() => {
-  if (route.path === "/" || route.path === "/contact-us") {
-    return "text-black";
-  } else {
-    return isScrolled.value ? "text-black" : "text-lime-50";
-  }
-});
+const handleScroll = () => {
+  isScrolled.value = window.scrollY > 50;
+};
 
-// Register scroll event listener when component mounts and remove on unmount
 onMounted(() => {
   window.addEventListener("scroll", handleScroll);
+  // Initial scroll check
+  handleScroll();
 });
+
 onUnmounted(() => {
   window.removeEventListener("scroll", handleScroll);
 });

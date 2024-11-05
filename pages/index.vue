@@ -12,7 +12,9 @@
       <header
         class="text-center flex flex-col justify-center items-center content"
       >
+        <!-- Add ref="textElement" to the h1 tag -->
         <h1
+          ref="textElement"
           class="font-bold text-3xl sm:text-4xl md:text-5xl xl:text-[70px] text-gaws-base-color tracking-[-2px]"
           data-aos="fade-up"
           data-aos-duration="2000"
@@ -95,6 +97,94 @@
   </section>
 </template>
 
+<script setup>
+import { ref, onMounted, onBeforeUnmount } from "vue";
+import AOS from "aos";
+import { gsap, TextPlugin } from "gsap/all";
+
+// Initialise GSAP and register TextPlugin
+gsap.registerPlugin(TextPlugin);
+
+const textElement = ref(null);
+const text = "Gaws Simplifying Complexity. We make IT simple.";
+
+// Element fade animations
+const beforeEnter = (el) => {
+  el.style.opacity = 0;
+};
+const enter = (el, done) => {
+  el.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 500 }).onfinish = done;
+};
+
+// Service logos for the services section
+import graduationCapLogo from "@/assets/education-cap.svg";
+import processorLogo from "@/assets/iconmonstr-cpu-2.svg";
+import gearsLogo from "@/assets/gear.svg";
+import deploymentLogo from "@/assets/manufacture.svg";
+
+const servicesImages = [
+  {
+    title: "Education Solutions",
+    logo: graduationCapLogo,
+    description:
+      "Developing e-learning platforms and digital tools to enhance engagement, interaction, and the effectiveness of learning experiences.",
+  },
+  {
+    title: "Embedded Systems",
+    logo: processorLogo,
+    description:
+      "Providing customized embedded systems development for smart devices, automation, and the Internet of Things (IoT).",
+  },
+  {
+    title: "Industrial Solutions",
+    logo: gearsLogo,
+    description:
+      "Industrial software solutions that automate workflows, minimize risks, and significantly boost productivity.",
+  },
+  {
+    title: "Manufacturing Solutions",
+    logo: deploymentLogo,
+    description:
+      "Delivering smart manufacturing solutions with real-time monitoring, resource optimization, and enhanced efficiency.",
+  },
+];
+
+onMounted(() => {
+  // Initialize AOS
+  AOS.init();
+
+  // GSAP text typing effect
+  if (textElement.value) {
+    textElement.value.textContent = ""; // Clear initial content
+    gsap.to(textElement.value, {
+      text: text,
+      duration: 6,
+      ease: "power4.out",
+      delay: 0.1,
+    });
+  }
+
+  // Gradients animation setup
+  const gradients = document.querySelectorAll(".gradient");
+  function randomizeTranslation(element) {
+    const randomX = Math.random() * 55 + 20;
+    const randomY = Math.random() * 55 + 20;
+    element.style.top = `${randomY}%`;
+    element.style.left = `${randomX}%`;
+  }
+  if (gradients.length > 0) {
+    gradients.forEach((e) => randomizeTranslation(e));
+    setInterval(() => {
+      gradients.forEach((e) => randomizeTranslation(e));
+    }, 3000);
+  }
+});
+
+onBeforeUnmount(() => {
+  AOS.refresh(); // Refresh AOS on component unmount
+});
+</script>
+
 <style scoped>
 header {
   z-index: 5;
@@ -105,9 +195,7 @@ header {
 }
 
 .fade-enter,
-.fade-leave-to
-
-/* .fade-leave-active in <2.1.8 */ {
+.fade-leave-to {
   opacity: 0;
 }
 
@@ -176,107 +264,3 @@ header {
   }
 }
 </style>
-
-<script setup>
-import { ref, onMounted } from "vue";
-// Service Logos
-import graduationCapLogo from "@/assets/education-cap.svg";
-import processorLogo from "@/assets/iconmonstr-cpu-2.svg";
-import gearsLogo from "@/assets/gear.svg";
-import deploymentLogo from "@/assets/manufacture.svg";
-import { gsap, TextPlugin } from "gsap/all";
-
-// Initialise GSAP
-gsap.registerPlugin(TextPlugin);
-
-const beforeEnter = (el) => {
-  el.style.opacity = 0; // Set initial opacity
-};
-
-const enter = (el, done) => {
-  // Animate the opacity to 1 over 0.5 seconds
-  el.animate(
-    [
-      {
-        opacity: 0,
-      },
-      {
-        opacity: 1,
-      },
-    ],
-    {
-      duration: 500,
-    }
-  ).onfinish = done; // Call done when the animation is finished
-};
-
-onMounted(() => {
-  AOS.init();
-
-  function randomizeTranslation(element) {
-    const randomX = Math.random() * 55 + 20;
-    const randomY = Math.random() * 55 + 20;
-    element.style.top = `${randomY}%`;
-    element.style.left = `${randomX}%`;
-  }
-
-  const gradients = document.querySelectorAll(".gradient");
-
-  if (gradients.length > 0) {
-    gradients.forEach((e) => randomizeTranslation(e));
-    setInterval(() => {
-      gradients.forEach((e) => randomizeTranslation(e));
-    }, 3000);
-  }
-});
-
-onBeforeUnmount(() => {
-  AOS.refresh(); // Refresh AOS on component unmount
-});
-
-const text = "Gaws Simplifying Complexity. We make IT simple.";
-
-const textElement = ref(null);
-
-onMounted(() => {
-  textElement.value.textContent = "";
-
-  gsap.to(textElement.value, {
-    text: text, // Use the `text` property with `TextPlugin`
-    duration: 6, // Adjust speed for the typing effect
-    ease: "power4.out",
-    delay: 0.1, // Optional delay before animation starts
-  });
-});
-
-const servicesImages = [
-  {
-    title: "Education Solutions",
-    logo: graduationCapLogo,
-    description:
-      "Developing e-learning platforms and digital tools to enhance engagement, interaction, and the effectiveness of learning experiences.",
-  },
-  {
-    title: "Embedded Systems",
-    logo: processorLogo,
-    description:
-      "Providing customized embedded systems development for smart devices, automation, and the Internet of Things (IoT).",
-  },
-  {
-    title: "Industrial Solutions",
-    logo: gearsLogo,
-    description:
-      "Industrial software solutions that automate workflows, minimize risks, and significantly boost productivity.",
-  },
-  {
-    title: "Manufacturing Solutions",
-    logo: deploymentLogo,
-    description:
-      "Delivering smart manufacturing solutions with real-time monitoring, resource optimization, and enhanced efficiency.",
-  },
-];
-
-definePageMeta({
-  title: "Gaws IT Solutions | Home",
-});
-</script>
