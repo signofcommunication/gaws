@@ -123,7 +123,7 @@
               </div>
               <div class="w-full md:w-1/2">
                 <div class="card h-fit max-w-6xl p-5 md:p-12" id="form">
-                  <h2 class="mb-4 text-2xl font-bold dark:text-white">
+                  <h2 class="mb-4 text-2xl font-bold text-black">
                     Ready to Get Started?
                   </h2>
                   <form @submit.prevent="handleSubmit" id="contactForm">
@@ -329,5 +329,6 @@ const handleSubmit = () => {
     height: 100%;
     filter: blur(50px);
     opacity: 0.5;
+    pointer-events: none;
 }
 </style>
