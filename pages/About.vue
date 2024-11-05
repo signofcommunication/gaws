@@ -200,10 +200,6 @@ onBeforeUnmount(() => {
 </template>
 
 <style scoped>
-/* #vision-mission {
-    background-color: #FFFBF5;
-} */
-
 .mission,
 .vision {
     font-size: 24px;
@@ -223,10 +219,7 @@ onBeforeUnmount(() => {
 }
 
 .fade-enter,
-.fade-leave-to
-
-/* .fade-leave-active in <2.1.8 */
-    {
+.fade-leave-to {
     opacity: 0;
 }
 

@@ -53,7 +53,9 @@
 
 <style scoped>
 .career-bg {
-    background-image: url('/assets/career.png');
+  background-image: url('/assets/GAWS-footer.png');
+  background-size: cover;
+  background-position: center;
 }
 
 /* Blur overlay */
