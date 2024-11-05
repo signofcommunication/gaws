@@ -18,10 +18,7 @@
           class="font-bold text-3xl sm:text-4xl md:text-5xl xl:text-[70px] text-gaws-base-color tracking-[-2px]"
           data-aos="fade-up"
           data-aos-duration="2000"
-        >
-          GAWS Simplifying Complexity. <br />
-          We make IT simple.
-        </h1>
+        ></h1>
         <p class="max-w-[70%] mx-auto mt-[20px] text-[#6767df] mb-[40px]">
           Our mission is to deliver IT solutions that enhance product quality,
           streamline processes, and empower quick, strategic decisions—driving
@@ -106,7 +103,7 @@ import { gsap, TextPlugin } from "gsap/all";
 gsap.registerPlugin(TextPlugin);
 
 const textElement = ref(null);
-const text = "Gaws Simplifying Complexity. We make IT simple.";
+const text = "Gaws Simplifying Complexity. <br/> We make IT simple.";
 
 // Element fade animations
 const beforeEnter = (el) => {
@@ -155,7 +152,7 @@ onMounted(() => {
 
   // GSAP text typing effect
   if (textElement.value) {
-    textElement.value.textContent = ""; // Clear initial content
+    textElement.value.innerHTML = ""; // Clear initial content
     gsap.to(textElement.value, {
       text: text,
       duration: 6,
