@@ -7,16 +7,13 @@
         <div
           v-for="(image, index) in trustedByImages"
           :key="index"
-          class="w-[200px] sm:w-[250px] flex justify-center items-center px-2 sm:px-4"
-        >
+          class="w-[200px] sm:w-[250px] flex justify-center items-center px-2 sm:px-4">
           <div
-            class="w-full min-h-[120px] sm:min-h-[140px] md:min-h-[160px] flex items-center justify-center"
-          >
+            class="w-full min-h-[120px] sm:min-h-[140px] md:min-h-[160px] flex items-center justify-center">
             <img
               :src="image.link"
               :alt="image.name"
-              class="w-auto min-h-[100px] h-full max-h-[120px] sm:max-h-[140px] md:max-h-[160px] object-contain grayscale hover:grayscale-0 transition-all duration-300"
-            />
+              class="w-auto min-h-[100px] h-full max-h-[120px] sm:max-h-[140px] md:max-h-[160px] object-contain grayscale hover:grayscale-0 transition-all duration-300" />
           </div>
         </div>
       </div>
@@ -26,16 +23,13 @@
         <div
           v-for="(image, index) in trustedByImages"
           :key="`dup-${index}`"
-          class="w-[200px] sm:w-[250px] flex justify-center items-center px-2 sm:px-4"
-        >
+          class="w-[200px] sm:w-[250px] flex justify-center items-center px-2 sm:px-4">
           <div
-            class="w-full min-h-[120px] sm:min-h-[140px] md:min-h-[160px] flex items-center justify-center"
-          >
+            class="w-full min-h-[120px] sm:min-h-[140px] md:min-h-[160px] flex items-center justify-center">
             <img
               :src="image.link"
               :alt="image.name"
-              class="w-auto min-h-[100px] h-full max-h-[120px] sm:max-h-[140px] md:max-h-[160px] object-contain grayscale hover:grayscale-0 transition-all duration-300"
-            />
+              class="w-auto min-h-[100px] h-full max-h-[120px] sm:max-h-[140px] md:max-h-[160px] object-contain grayscale hover:grayscale-0 transition-all duration-300" />
           </div>
         </div>
       </div>
@@ -54,7 +48,7 @@
 }
 
 .animate-marquee {
-  animation: marquee 25s linear infinite;
+  animation: marquee 35s linear infinite;
   will-change: transform;
   width: fit-content;
   display: flex;
@@ -99,15 +93,15 @@ img:hover {
 </style>
 
 <script setup>
-  // Import images
-import meidenLogo from '@/assets/meiden.png';
-import wuerthLogo from '@/assets/Wuerth 1.png';
-import pokphandLogo from '@/assets/pokphand.png';
-import toyotaLogo from '@/assets/toyota-indonesia.png';
-import peroduaLogo from '@/assets/perodua.png';
-import brtLogo from '@/assets/brt.png';
-import ranchMarketLogo from '@/assets/ranch-market.png';
-import astraUdLogo from '@/assets/astra-ud.png';
+// Import images
+import meidenLogo from "@/assets/meiden.png";
+import wuerthLogo from "@/assets/Wuerth 1.png";
+import pokphandLogo from "@/assets/pokphand.png";
+import toyotaLogo from "@/assets/toyota-indonesia.png";
+import peroduaLogo from "@/assets/perodua.png";
+import brtLogo from "@/assets/brt.png";
+import ranchMarketLogo from "@/assets/ranch-market.png";
+import astraUdLogo from "@/assets/astra-ud.png";
 
 const trustedByImages = [
   { link: astraUdLogo },
