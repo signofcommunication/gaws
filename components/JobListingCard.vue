@@ -4,20 +4,20 @@ const props = defineProps(['title','department','location','type','id'])
 
 <template>
   <div
-    class="bg-slate-200 shadow-xl shadow-gray-100 w-full max-w-4xl flex flex-col sm:flex-row gap-3 sm:items-center justify-between px-5 py-4 my-4 rounded-md mx-auto"
+    class="bg-blue-50 shadow-lg shadow-blue-100 w-full max-w-4xl flex flex-col sm:flex-row gap-3 sm:items-center justify-between px-5 py-4 my-4 rounded-md mx-auto"
   >
     <div>
-      <span class="text-purple-800 text-sm">{{props.department}}</span>
-      <h3 class="font-bold mt-px">{{ props.title }}</h3>
+      <span class="text-blue-700 text-sm">{{ props.department }}</span>
+      <h3 class="font-semibold mt-px text-blue-900">{{ props.title }}</h3>
       <div class="flex items-center gap-3 mt-2">
         <span
-          class="bg-purple-100 text-purple-700 rounded-full px-3 py-1 text-sm"
+          class="bg-blue-100 text-blue-700 rounded-full px-3 py-1 text-sm"
           >{{ props.type }}</span
         >
-        <span class="text-slate-600 text-sm flex gap-1 items-center">
+        <span class="text-blue-600 text-sm flex gap-1 items-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="h-4 w-4"
+            class="h-4 w-4 text-blue-500"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -41,12 +41,12 @@ const props = defineProps(['title','department','location','type','id'])
     <div>
       <NuxtLink
         :to="`/careers/${props.id}`"
-        class="bg-gaws-base-color text-white font-medium px-4 py-2 rounded-md flex gap-1 items-center"
+        class="bg-blue-600 text-white font-medium px-4 py-2 rounded-md flex gap-1 items-center hover:bg-blue-700 transition"
       >
         Apply Now
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          class="h-4 w-4"
+          class="h-4 w-4 text-white"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"

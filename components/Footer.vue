@@ -5,7 +5,7 @@
         <!-- Left Section with Logo and Text -->
         <div class="mb-6 md:mb-0">
           <a href="/" class="flex items-center mb-4">
-            <img src="/assets/gaws-logo.png" class="h-28" alt="Gaws Logo" />
+            <img src="/assets/gaws-logo.svg" class="h-48" alt="Gaws Logo" />
           </a>
           <span class="text-white text-xl font-semibold">
             Let's start your <br />

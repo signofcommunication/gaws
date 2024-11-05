@@ -6,6 +6,7 @@
     <div class="gradient-container">
       <div class="gradient" ref="element"></div>
       <div class="gradient"></div>
+
     </div>
     <transition name="fade" @before-enter="beforeEnter" @enter="enter">
       <header
@@ -73,11 +74,11 @@
     </a>
   </section>
 
-  <!-- Trusted By -->
+  <!-- Our Client -->
   <section
     class="container max-w-screen-xl flex flex-col mx-auto items-center justify-center my-16 px-4"
     data-aos="fade-left">
-    <h1 class="text-40px font-bold mb-12">Trusted By</h1>
+    <h1 class="text-40px font-bold mb-12">Our Client</h1>
     <ResponsiveMarquee />
   </section>
 </template>

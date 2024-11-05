@@ -45,11 +45,12 @@
             <NuxtLink
               @click="scrollToTop"
               :to="link.path"
-              :class="[
-                'block py-2 px-3 transition ease-in-out duration-300 hover:border-b-2 hover:border-blue-700',
-                isActive(link.path),
-                textColorClass,
-              ]">
+              :class="[ 
+                'font-medium block py-2 px-3 transition ease-in-out duration-300 hover:border-b-2 hover:border-blue-700', 
+                isActive(link.path), 
+                textColorClass 
+              ]"
+            >
               {{ link.name }}
             </NuxtLink>
           </li>
