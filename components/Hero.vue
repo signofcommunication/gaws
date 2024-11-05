@@ -69,10 +69,14 @@
 </template>
 
 <script setup>
-import education from '../assets/Services/educational solutions.png'
-import industrial from '../assets/Services/Industrial Solutions.png'
-import embedded from '../assets/Services/embedded systems.png'
-import manufacturing from '../assets/Services/manufacturing solutions.png'
+import education from '../assets/Services/Mathematics-cuate.svg'
+import industrial from '../assets/Services/Process-bro.svg'
+import manufacturing from '../assets/Services/Manufacturing Process-bro.svg'
+import finance from '../assets/Services/Manage money-rafiki.svg'
+import telecommunication from '../assets/Services/Broadcast-amico.svg'
+import integration from '../assets/Services/Software integration-rafiki.svg'
+import rfid from '../assets/Services/ID Card-bro.svg'
+import embedded from '../assets/Services/Robot arm-bro.svg'
 import { useRouter } from 'vue-router'
 
 const router = useRouter()
@@ -109,7 +113,7 @@ const servicesList = [
   {
     title: 'Finance Solutions',
     description: 'Developing secure and compliant financial software for institutions, enabling efficient operations, streamlined transactions, and enhanced customer experiences.',
-    image: manufacturing,
+    image: finance,
   },
   {
     title: 'Sales & Marketing Solutions',
@@ -119,17 +123,17 @@ const servicesList = [
   {
     title: 'RFID Solutions',
     description: 'Offering RFID technology solutions for asset tracking, inventory management, and security, enabling seamless data capture and management for smarter operations.',
-    image: manufacturing,
+    image: rfid,
   },
   {
     title: 'Telecommunication Solutions',
     description: 'Providing reliable telecommunication software solutions to enhance connectivity, improve data security, and streamline operations for telecom providers.',
-    image: manufacturing,
+    image: telecommunication,
   },
   {
     title: 'Integration',
     description: 'Specializing in seamless integration services to connect disparate systems, optimize data flow, and create unified solutions for enhanced business agility.',
-    image: manufacturing,
+    image: integration,
   },
 ];
 </script>
