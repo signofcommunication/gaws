@@ -316,9 +316,8 @@ const handleSubmit = () => {
 
 <style scoped>
 .contact-section {
-  /* Full-width background */
   width: 100%;
-  background: hsl(239, 100%, 95%);
+  background: hsl(210, 100%, 100%);
   padding: 2rem 0;
 }
 
