@@ -4,7 +4,7 @@
       <div
         v-for="(list, index) in servicesList"
         :key="index"
-        class="flex flex-col lg:flex-row lg:gap-12 mb-16 lg:mb-24"
+        class="flex flex-col lg:flex-row lg:gap-12 mb-16 lg:mb-24 items-center"
       >
         <!-- Text Content -->
         <div
@@ -26,7 +26,9 @@
             {{ list.description }}
           </p>
           <div class="flex flex-wrap gap-4">
+            <!-- Show the button only for the first and last items -->
             <a
+              v-if="index === 0 || index === servicesList.length - 1"
               href="#"
               @click.prevent="handleGetStarted(list.title)"
               class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-white bg-primary-700 rounded-lg hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900"
