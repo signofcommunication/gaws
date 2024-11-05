@@ -2,19 +2,21 @@
   <!-- Header -->
   <div
     id="about"
-    class="bg-dark min-h-screen flex flex-col items-center justify-center px-4">
+    class="bg-dark min-h-screen flex flex-col items-center justify-center px-4"
+  >
     <div class="gradient-container">
       <div class="gradient" ref="element"></div>
       <div class="gradient"></div>
-
     </div>
     <transition name="fade" @before-enter="beforeEnter" @enter="enter">
       <header
-        class="text-center flex flex-col justify-center items-center content">
+        class="text-center flex flex-col justify-center items-center content"
+      >
         <h1
           class="font-bold text-3xl sm:text-4xl md:text-5xl xl:text-[70px] text-gaws-base-color tracking-[-2px]"
           data-aos="fade-up"
-          data-aos-duration="2000">
+          data-aos-duration="2000"
+        >
           GAWS Simplifying Complexity. <br />
           We make IT simple.
         </h1>
@@ -33,11 +35,13 @@
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="size-6">
+            class="size-6"
+          >
             <path
               stroke-linecap="round"
               stroke-linejoin="round"
-              d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+              d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+            />
           </svg>
         </a>
       </header>
@@ -50,26 +54,33 @@
     class="container max-w-screen-xl mx-auto flex flex-col justify-center items-center my-16 px-4"
     data-aos="fade-right"
     data-aos-easing="ease-in-back"
-    data-aos-delay="300">
+    data-aos-delay="300"
+  >
     <h1 class="text-4xl text-center mb-12">Our Services</h1>
     <div
-      class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+    >
       <div
         v-for="service in servicesImages"
         :key="service.title"
-        class="p-6 rounded-lg shadow-custom bg-[#ecf1f9] text-center">
+        class="p-6 rounded-lg shadow-lg bg-[#f0f5ff] text-center"
+      >
         <img
           :src="service.logo"
           alt="Service Logo"
-          class="w-16 h-16 mx-auto mb-4" />
-        <h2 class="text-2xl font-bold mb-2">{{ service.title }}</h2>
-        <p>{{ service.description }}</p>
+          class="w-16 h-16 mx-auto mb-4"
+        />
+        <h2 class="text-2xl font-bold mb-2 text-black">
+          {{ service.title }}
+        </h2>
+        <p class="text-gray-800">{{ service.description }}</p>
       </div>
     </div>
 
     <a
       href="/services"
-      class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 z-20 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-xl px-5 py-2.5 text-center mt-10 mb-2">
+      class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 z-20 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-xl px-5 py-2.5 text-center mt-10 mb-2"
+    >
       View More
     </a>
   </section>
@@ -77,7 +88,8 @@
   <!-- Our Client -->
   <section
     class="container max-w-screen-xl flex flex-col mx-auto items-center justify-center my-16 px-4"
-    data-aos="fade-left">
+    data-aos="fade-left"
+  >
     <h1 class="text-40px font-bold mb-12">Our Client</h1>
     <ResponsiveMarquee />
   </section>
@@ -168,10 +180,10 @@ header {
 <script setup>
 import { ref, onMounted } from "vue";
 // Service Logos
-import graduationCapLogo from "@/assets/Graduation Cap.png";
-import processorLogo from "@/assets/Processor.png";
-import gearsLogo from "@/assets/Gears.png";
-import deploymentLogo from "@/assets/Deployment.png";
+import graduationCapLogo from "@/assets/education-cap.svg";
+import processorLogo from "@/assets/iconmonstr-cpu-2.svg";
+import gearsLogo from "@/assets/gear.svg";
+import deploymentLogo from "@/assets/manufacture.svg";
 import { gsap, TextPlugin } from "gsap/all";
 
 // Initialise GSAP

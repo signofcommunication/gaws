@@ -78,16 +78,19 @@ onMounted(() => {
   <section>
     <!-- Header -->
     <header
-      class="relative bg-[url('/assets/heading.jpg')] bg-cover bg-no-repeat h-screen">
+      class="relative bg-[url('/assets/heading.jpg')] bg-cover bg-no-repeat h-screen"
+    >
       <!-- Overlay -->
       <div class="absolute inset-0 bg-black opacity-50"></div>
 
       <div
-        class="relative container max-w-screen-xl mx-auto text-white h-full flex flex-col justify-center p-4">
+        class="relative container max-w-screen-xl mx-auto text-white h-full flex flex-col justify-center p-4"
+      >
         <!-- Responsive Heading -->
         <h1
           class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold"
-          ref="textElement"></h1>
+          ref="textElement"
+        ></h1>
 
         <!-- Responsive Paragraph -->
         <p class="my-4 sm:my-6 text-sm sm:text-base md:text-lg">
@@ -106,33 +109,14 @@ onMounted(() => {
       </div>
     </header>
 
-    <div
-      id="about"
-      class="bg-dark min-h-screen flex flex-col items-center justify-center px-4">
-      <div class="gradient-container">
-        <div class="gradient" ref="element"></div>
-        <div class="gradient"></div>
-      </div>
-      <transition name="fade" @before-enter="beforeEnter" @enter="enter">
-        <header
-          class="text-center flex flex-col justify-center items-center content">
-          <h1
-            class="font-bold text-3xl sm:text-4xl md:text-5xl text-gaws-base-color"
-            data-aos="fade-up"
-            data-aos-duration="2000">
-            Gaws Simplifying Complexity. <br />
-            We make IT simple.
-          </h1>
-        </header>
-      </transition>
-    </div>
-
     <!-- Description -->
     <section
-      class="container max-w-screen-xl mx-auto flex flex-col items-center justify-center my-12">
+      class="container max-w-screen-xl mx-auto flex flex-col items-center justify-center my-12"
+    >
       <div class="description">
         <p
-          class="max-w-xl sm:max-w-2xl md:max-w-3xl text-base md:text-2xl text-center mb-8">
+          class="max-w-xl sm:max-w-2xl md:max-w-3xl text-base md:text-2xl text-center mb-8"
+        >
           GAWS was established in 1998 with a strong foundation of expertise and
           a highly capable team. From the very beginning, we’ve been committed
           to actively supporting our clients in achieving their goals through
@@ -141,7 +125,8 @@ onMounted(() => {
           industries.
         </p>
         <p
-          class="max-w-xl sm:max-w-2xl md:max-w-3xl text-base md:text-2xl text-center mb-8">
+          class="max-w-xl sm:max-w-2xl md:max-w-3xl text-base md:text-2xl text-center mb-8"
+        >
           Our experience spans a wide array of sectors, developing systems for
           industrial, manufacturing, logistics, finance, sales & marketing,
           services, telecommunications, RFID, education, and even embedded
@@ -157,16 +142,19 @@ onMounted(() => {
       class="max-w-full mx-auto bg-dark min-h-screen flex flex-col items-center justify-center px-4"
       data-aos="fade-right"
       data-aos-easing="ease-in-back"
-      data-aos-delay="300">
+      data-aos-delay="300"
+    >
       <div class="container max-w-screen-xl h-full flex flex-col md:flex-row">
         <div class="w-full md:w-1/2 flex justify-center items-center">
           <img
             src="/assets/brainstorming.png"
             alt="Brainstorming"
-            class="w-64 sm:w-80 md:w-full" />
+            class="w-64 sm:w-80 md:w-full"
+          />
         </div>
         <div
-          class="flex flex-col justify-center w-full md:w-1/2 mt-8 md:mt-0 px-4">
+          class="flex flex-col justify-center w-full md:w-1/2 mt-8 md:mt-0 px-4"
+        >
           <h1 class="font-bold text-2xl md:text-3xl vision mb-4">Vision</h1>
           <p class="text-base md:text-lg mb-6">
             Menjadi perusahaan teknologi terdepan yang memberikan solusi
@@ -198,17 +186,20 @@ onMounted(() => {
       class="container max-w-screen-xl h-full flex flex-col mx-auto section-gap px-4"
       data-aos="fade-left"
       data-aos-easing="ease-in-back"
-      data-aos-delay="300">
+      data-aos-delay="300"
+    >
       <h1 class="text-center why font-bold text-3xl md:text-4xl mb-12">
         Why Gaws?
       </h1>
       <div class="flex flex-col md:flex-row items-center justify-center gap-8">
         <div
-          class="flex flex-col justify-center items-center text-center max-w-md">
+          class="flex flex-col justify-center items-center text-center max-w-md"
+        >
           <img
             src="/assets/Startup launch, ideas and metrics.png"
             alt="Startup Launch"
-            class="w-48 sm:w-56 md:w-64 mb-4" />
+            class="w-48 sm:w-56 md:w-64 mb-4"
+          />
           <h1 class="font-bold text-2xl my-2">Weekly / Biweekly Meeting</h1>
           <p class="text-sm">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit
@@ -216,11 +207,13 @@ onMounted(() => {
           </p>
         </div>
         <div
-          class="flex flex-col justify-center items-center text-center max-w-md">
+          class="flex flex-col justify-center items-center text-center max-w-md"
+        >
           <img
             src="/assets/Ai assistant in retail.png"
             alt="AI Assistant"
-            class="w-48 sm:w-56 md:w-64 mb-4" />
+            class="w-48 sm:w-56 md:w-64 mb-4"
+          />
           <h1 class="font-bold text-2xl my-2">Flexible Changes</h1>
           <p class="text-sm">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit
@@ -232,7 +225,8 @@ onMounted(() => {
 
     <!-- Happy Clients -->
     <div
-      class="container max-w-screen-xl flex flex-col mx-auto items-center justify-center section-gap px-4 relative flex overflow-x-hidden">
+      class="container max-w-screen-xl flex flex-col mx-auto items-center justify-center section-gap px-4 relative flex overflow-x-hidden"
+    >
       <h1 class="why font-bold text-3xl md:text-4xl mb-8">Happy Clients</h1>
       <p class="text-center text-base md:text-lg mb-8">
         Many companies have trusted GAWS. You still have doubts? contact us now
@@ -271,66 +265,5 @@ onMounted(() => {
   justify-content: center;
   overflow: hidden;
   position: relative;
-}
-
-.gradient-container {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  filter: blur(50px);
-  opacity: 0.5;
-}
-
-.gradient {
-  position: absolute;
-  width: 700px;
-  height: 700px;
-  border-radius: 50%;
-  background: radial-gradient(
-    circle,
-    hsl(239, 100%, 70%) 0%,
-    rgba(255, 99, 99, 0) 70%
-  );
-  transition: top 3s linear, left 3s linear;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.gradient:nth-child(2) {
-  background: radial-gradient(
-    circle,
-    hsl(239, 100%, 60%) 0%,
-    rgba(45, 45, 45, 0) 70%
-  );
-  animation-delay: -5s;
-}
-
-@keyframes move {
-  0% {
-    transform: translate(-50%, -50%);
-    left: 30%;
-    top: 10%;
-  }
-
-  50% {
-    transform: translate(0%, 0%);
-    left: 30%;
-    top: 10%;
-  }
-
-  100% {
-    transform: translate(-50%, -50%);
-    left: 30%;
-    top: 10%;
-  }
-}
-
-.content {
-  position: relative;
-  z-index: 1;
-  color: white;
-  font-family: system-ui, -apple-system, sans-serif;
-  text-align: center;
 }
 </style>
