@@ -127,11 +127,11 @@
                     Ready to Get Started?
                   </h2>
                   <form @submit.prevent="handleSubmit" id="contactForm">
-                    <div class="mb-6">
-                      <div class="mx-0 mb-1 sm:mb-4">
+                    <div class="space-y-4">
+                      <div>
                         <label
                           for="name"
-                          class="pb-1 text-xs uppercase tracking-wider text-black"
+                          class="text-xs font-semibold text-gray-600 uppercase tracking-wide"
                           >Name</label
                         >
                         <input
@@ -139,14 +139,14 @@
                           id="name"
                           v-model="formData.name"
                           placeholder="Your name"
-                          class="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-900 sm:mb-0"
+                          class="w-full mt-1 rounded-lg border border-gray-300 p-3 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-200 transition"
                           name="name"
                         />
                       </div>
-                      <div class="mx-0 mb-1 sm:mb-4">
+                      <div>
                         <label
                           for="email"
-                          class="pb-1 text-xs uppercase tracking-wider text-black"
+                          class="text-xs font-semibold text-gray-600 uppercase tracking-wide"
                           >Email</label
                         >
                         <input
@@ -154,20 +154,20 @@
                           id="email"
                           v-model="formData.email"
                           placeholder="Your email address"
-                          class="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-900 sm:mb-0"
+                          class="w-full mt-1 rounded-lg border border-gray-300 p-3 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-200 transition"
                           name="email"
                         />
                       </div>
-                      <div class="mx-0 mb-1 sm:mb-4">
+                      <div>
                         <label
                           for="service"
-                          class="pb-1 text-xs uppercase tracking-wider text-black"
+                          class="text-xs font-semibold text-gray-600 uppercase tracking-wide"
                           >Select Service</label
                         >
                         <select
                           id="service"
                           v-model="formData.service"
-                          class="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-900 sm:mb-0"
+                          class="w-full mt-1 rounded-lg border border-gray-300 p-3 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-200 transition"
                         >
                           <option disabled value="">Select a service</option>
                           <option
@@ -179,26 +179,25 @@
                           </option>
                         </select>
                       </div>
-                      <div class="mx-0 mb-1 sm:mb-4">
+                      <div>
                         <label
                           for="textarea"
-                          class="pb-1 text-xs uppercase tracking-wider text-black"
+                          class="text-xs font-semibold text-gray-600 uppercase tracking-wide"
                           >Message</label
                         >
                         <textarea
                           id="textarea"
                           v-model="formData.message"
-                          cols="30"
                           rows="5"
                           placeholder="Write your message..."
-                          class="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-900 sm:mb-0"
+                          class="w-full mt-1 rounded-lg border border-gray-300 p-3 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-200 transition resize-none"
                         ></textarea>
                       </div>
                     </div>
-                    <div class="text-center">
+                    <div class="text-center mt-6">
                       <button
                         type="submit"
-                        class="w-full bg-blue-800 text-white px-6 py-3 font-xl rounded-md sm:mb-0"
+                        class="w-full bg-blue-700 hover:bg-blue-800 text-white py-3 font-semibold rounded-lg transition focus:outline-none focus:ring focus:ring-blue-500 focus:ring-opacity-50"
                       >
                         Send Message
                       </button>
