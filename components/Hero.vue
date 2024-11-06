@@ -4,7 +4,7 @@
       <div
         v-for="(list, index) in servicesList"
         :key="index"
-        class="flex flex-col lg:flex-row lg:gap-12 mb-16 lg:mb-24 items-center"
+        class="flex flex-col-reverse lg:flex-row lg:gap-12 mb-16 lg:mb-24 items-center"
       >
         <!-- Text Content -->
         <div

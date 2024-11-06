@@ -1,36 +1,42 @@
 <script setup>
 import gsap from "gsap";
-import { ScrollToPlugin, TextPlugin } from "gsap/all";
-import { onMounted, ref } from "vue";
+import {
+    ScrollToPlugin,
+    TextPlugin
+} from "gsap/all";
+import {
+    onMounted,
+    ref
+} from "vue";
 import Hero from "@/components/Hero.vue";
 
 gsap.registerPlugin(ScrollToPlugin);
 gsap.registerPlugin(TextPlugin);
 
 const scrollToSelection = (selector) => {
-  gsap.to(window, {
-    duration: 1,
-    scrollTo: selector,
-    ease: "power1.inOut",
-  });
+    gsap.to(window, {
+        duration: 1,
+        scrollTo: selector,
+        ease: "power1.inOut",
+    });
 };
 
 const text = "Make Your Problems Simple.";
 const textElement = ref(null);
 
 onMounted(() => {
-  textElement.value.textContent = "";
+    textElement.value.textContent = "";
 
-  gsap.to(textElement.value, {
-    text: text,
-    duration: 6,
-    ease: "power4.out",
-    delay: 0.1,
-  });
+    gsap.to(textElement.value, {
+        text: text,
+        duration: 6,
+        ease: "power4.out",
+        delay: 0.1,
+    });
 });
 
 useSeoMeta({
-  title: "Services",
+    title: "Services",
 });
 </script>
 
@@ -67,8 +73,6 @@ useSeoMeta({
           increase efficiency, and reach their customers.
         </p>
       </header>
-
-      <!-- Hero Component (Ensures it's within the root div) -->
       <Hero />
     </section>
   </div>
@@ -77,15 +81,15 @@ useSeoMeta({
 
 <style scoped>
 #header-services {
-  height: 50vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .services-card {
-  position: relative;
-  top: -20%;
+    position: relative;
+    top: -20%;
 }
 </style>
