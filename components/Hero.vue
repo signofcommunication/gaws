@@ -21,7 +21,7 @@
             {{ list.title }}
           </h1>
           <p
-            class="mb-8 font-light text-gray-500 md:mb-10 md:text-lg lg:text-xl dark:text-gray-400"
+            class="mb-8 font-light md:mb-10 md:text-lg lg:text-xl dark:text-gray-800"
           >
             {{ list.description }}
           </p>

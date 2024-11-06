@@ -71,7 +71,7 @@
     </header>
 
     <!-- Main Content -->
-    <main class="container mx-auto px-4 py-12 border flex justify-center">
+    <main class="container mx-auto px-4 py-12 flex justify-center">
       <div class="flex flex-col lg:flex-row gap-8 max-w-6xl w-full">
         <!-- Job Details -->
         <div class="flex-1 lg:mr-8">

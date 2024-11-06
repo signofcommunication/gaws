@@ -57,14 +57,8 @@
                 'font-medium',
                 isActive(link.path),
                 {
-                  // Black text if scrolled, on /, on /contact-us, or on /careers/[id] dynamic routes or /careers with scroll
-                  'text-black': 
-                    isScrolled || route.path === '/' || route.path === '/contact-us' || 
-                    route.name === 'careers-id' || (route.path === '/careers' && isScrolled),
-                  // White text otherwise
-                  'text-white': 
-                    !isScrolled && route.path !== '/' && route.path !== '/contact-us' && 
-                    !(route.name === 'careers-id' || route.path === '/careers')
+                  'text-black': shouldBeBlack,
+                  'text-white': shouldBeWhite
                 }
               ]"
             >
@@ -78,7 +72,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from "vue";
+import { ref, onMounted, onUnmounted, computed } from "vue";
 import { useRoute } from "vue-router";
 
 const isMenuOpen = ref(false);
@@ -93,6 +87,33 @@ const navLinks = [
   { name: "Blog", path: "/blog" },
   { name: "Contact Us", path: "/contact-us" },
 ];
+
+// Check if current route is a careers sub-route
+const isCareerSubRoute = computed(() => {
+  return route.path.startsWith('/careers/');
+});
+
+// Check if current route is exactly the careers route
+const isExactCareersRoute = computed(() => {
+  return route.path === '/careers';
+});
+
+// Compute when text should be black
+const shouldBeBlack = computed(() => {
+  return isScrolled.value ||
+         route.path === '/' ||
+         route.path === '/contact-us' ||
+         isCareerSubRoute.value;
+});
+
+// Compute when text should be white
+const shouldBeWhite = computed(() => {
+  return !isScrolled.value &&
+         route.path !== '/' &&
+         route.path !== '/contact-us' &&
+         !isCareerSubRoute.value &&
+         (isExactCareersRoute.value || !route.path.startsWith('/careers'));
+});
 
 const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value;

@@ -4,7 +4,7 @@ const props = defineProps(['title','department','location','type','id'])
 
 <template>
   <div
-    class="bg-blue-50 shadow-lg shadow-blue-100 w-full max-w-4xl flex flex-col sm:flex-row gap-3 sm:items-center justify-between px-5 py-4 my-4 rounded-md mx-auto"
+    class="bg-blue-50 w-full max-w-4xl flex flex-col sm:flex-row gap-3 sm:items-center justify-between px-5 py-4 my-4 rounded-md mx-auto"
   >
     <div>
       <span class="text-blue-700 text-sm">{{ props.department }}</span>
