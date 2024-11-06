@@ -12,8 +12,14 @@ export default defineNuxtConfig({
       link: [{ rel: "icon", type: "image/x-icon", href: "/gaws-logo (1).ico" }],
     },
   },
-  // Move meta configuration to the root
-
+  ssr: false,
+  nitro: {
+    baseURL: "http://localhost:3000",
+    prerender: {
+      crawlLinks: true,
+      // failOnError: false,
+    },
+  },
   compatibilityDate: "2024-04-03",
   devtools: { enabled: false },
   css: ["~/assets/css/main.css"],

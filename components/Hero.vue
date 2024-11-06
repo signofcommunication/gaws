@@ -25,8 +25,7 @@
           >
             {{ list.description }}
           </p>
-          <div class="flex flex-wrap gap-4">
-            <!-- Show the button only for the first and last items -->
+          <!-- <div class="flex flex-wrap gap-4">
             <a
               v-if="index === 0 || index === servicesList.length - 1"
               href="#"
@@ -47,7 +46,7 @@
                 ></path>
               </svg>
             </a>
-          </div>
+          </div> -->
         </div>
 
         <!-- Image Content remains the same -->
