@@ -70,6 +70,10 @@ import gsap from 'gsap';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import { onMounted, ref } from 'vue';
 
+useSeoMeta({
+  title:"Careers"
+})
+
 const jobs = ref([])
 
 gsap.registerPlugin(ScrollToPlugin);

@@ -252,6 +252,10 @@
 import { ref, onMounted } from 'vue';
 import { useRoute } from 'vue-router';
 
+useSeoMeta({
+  title:"Contact-Us"
+})
+
 const route = useRoute()
 
 const formData = ref({

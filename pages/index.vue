@@ -103,6 +103,12 @@ import processorLogo from "@/assets/iconmonstr-cpu-2.svg";
 import gearsLogo from "@/assets/gear.svg";
 import deploymentLogo from "@/assets/manufacture.svg";
 
+useSeoMeta({
+  title: "Home",
+  description:
+    "Gaws IT Solutions is a leading provider of IT solutions that enhance productivity, streamline processes, and empower quick, strategic decisions. Our mission is to deliver IT solutions that make complex tasks simple and empower employees to make informed decisions.",
+})
+
 // Initialise GSAP and register TextPlugin
 gsap.registerPlugin(TextPlugin);
 
@@ -176,9 +182,9 @@ onMounted(() => {
   }
 });
 
-// onBeforeUnmount(() => {
-//   AOS.refresh();
-// });
+onBeforeUnmount(() => {
+  AOS.refresh();
+});
 </script>
 
 <style scoped>

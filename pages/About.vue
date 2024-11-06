@@ -1,8 +1,12 @@
 <script setup>
 import { onBeforeUnmount, onMounted } from "vue";
+import { gsap, TextPlugin } from "gsap/all";
 import AOS from "aos";
 import "aos/dist/aos.css"; // Import AOS styles
-import { gsap, TextPlugin } from "gsap/all";
+
+useSeoMeta({
+  title:"About Us"
+})
 
 // Initialise GSAP
 gsap.registerPlugin(TextPlugin);

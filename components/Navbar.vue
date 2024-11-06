@@ -1,6 +1,10 @@
 <template>
   <nav
-    :class="[ 'fixed w-full top-0 transition-all duration-300 z-50', isScrolled ? 'bg-white/90' : 'bg-transparent', 'backdrop-blur-sm' ]"
+    :class="[ 
+      'fixed w-full top-0 transition-all duration-300 z-50',
+      isScrolled ? 'bg-white/90' : 'bg-transparent',
+      'backdrop-blur-sm',
+    ]"
   >
     <div
       class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
@@ -49,10 +53,20 @@
               @click="scrollToTop"
               :to="link.path"
               class="block py-2 px-3 transition-all duration-300 z-50 hover:text-blue-700"
-              :class="[ 'font-medium', isActive(link.path), {
-                'text-black': isScrolled || route.path === '/' || route.path === '/contact-us' || route.path.startsWith('/careers'), 
-                'text-white': !isScrolled && route.path !== '/' && route.path !== '/contact-us' && !route.path.startsWith('/careers')
-              }]"
+              :class="[
+                'font-medium',
+                isActive(link.path),
+                {
+                  // Black text if scrolled, on /, on /contact-us, or on /careers/[id] dynamic routes or /careers with scroll
+                  'text-black': 
+                    isScrolled || route.path === '/' || route.path === '/contact-us' || 
+                    route.name === 'careers-id' || (route.path === '/careers' && isScrolled),
+                  // White text otherwise
+                  'text-white': 
+                    !isScrolled && route.path !== '/' && route.path !== '/contact-us' && 
+                    !(route.name === 'careers-id' || route.path === '/careers')
+                }
+              ]"
             >
               {{ link.name }}
             </NuxtLink>
