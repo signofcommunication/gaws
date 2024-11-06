@@ -39,7 +39,6 @@ onMounted(() => {
     // Randomize between -50% and 25%
     const randomX = Math.random() * 55 + 20;
     const randomY = Math.random() * 55 + 20;
-    console.log(randomX, randomY);
 
     element.style.top = `${randomY}%`;
     element.style.left = `${randomX}%`;
