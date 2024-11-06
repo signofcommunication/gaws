@@ -1,10 +1,6 @@
 <template>
   <nav
-    :class="[
-      'fixed w-full top-0 transition-all duration-300 z-50',
-      isScrolled ? 'bg-white/90' : 'bg-transparent',
-      'backdrop-blur-sm',
-    ]"
+    :class="[ 'fixed w-full top-0 transition-all duration-300 z-50', isScrolled ? 'bg-white/90' : 'bg-transparent', 'backdrop-blur-sm' ]"
   >
     <div
       class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
@@ -53,14 +49,10 @@
               @click="scrollToTop"
               :to="link.path"
               class="block py-2 px-3 transition-all duration-300 z-50 hover:text-blue-700"
-              :class="[
-                'font-medium',
-                isActive(link.path),
-                {
-                  'text-black': isScrolled || route.path === '/' || route.path === '/contact-us',
-                  'text-white': !isScrolled && route.path !== '/' && route.path !== '/contact-us'
-                }
-              ]"
+              :class="[ 'font-medium', isActive(link.path), {
+                'text-black': isScrolled || route.path === '/' || route.path === '/contact-us' || route.path.startsWith('/careers'), 
+                'text-white': !isScrolled && route.path !== '/' && route.path !== '/contact-us' && !route.path.startsWith('/careers')
+              }]"
             >
               {{ link.name }}
             </NuxtLink>
@@ -106,7 +98,6 @@ const handleScroll = () => {
 
 onMounted(() => {
   window.addEventListener("scroll", handleScroll);
-  // Initial scroll check
   handleScroll();
 });
 
@@ -114,13 +105,3 @@ onUnmounted(() => {
   window.removeEventListener("scroll", handleScroll);
 });
 </script>
-
-<style scoped>
-.bg-gaws-transparent {
-  background-color: rgba(255, 255, 255, 0.7);
-}
-
-.bg-gaws-white-opacity {
-  background-color: rgba(255, 255, 255, 0.5);
-}
-</style>
