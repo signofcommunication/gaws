@@ -59,11 +59,12 @@
             </div>
           </div>
           <div class="mt-6 md:mt-0">
-            <button
+            <a
+              href="mailto:gaws-it@gaws-it.com"
               class="w-full md:w-auto bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium"
             >
               Apply Now
-            </button>
+            </a>
           </div>
         </div>
       </div>
