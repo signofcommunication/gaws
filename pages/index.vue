@@ -106,7 +106,7 @@ import gearsLogo from "@/assets/gear.svg";
 import deploymentLogo from "@/assets/manufacture.svg";
 
 useSeoMeta({
-  title: "Home",
+  title: "PT GAWS Inti Solusi",
   description:
     "Gaws IT Solutions is a leading provider of IT solutions that enhance productivity, streamline processes, and empower quick, strategic decisions. Our mission is to deliver IT solutions that make complex tasks simple and empower employees to make informed decisions.",
 })
