@@ -143,6 +143,7 @@ onMounted(() => {
       data-aos="fade-right"
       data-aos-easing="ease-in-back"
       data-aos-delay="300"
+      data-aos-once="true"
     >
       <div class="container max-w-screen-xl h-full flex flex-col md:flex-row">
         <div class="w-full md:w-1/2 flex justify-center items-center">
@@ -187,6 +188,7 @@ onMounted(() => {
       data-aos="fade-left"
       data-aos-easing="ease-in-back"
       data-aos-delay="300"
+      data-aos-once="true"
     >
       <h1 class="text-center why font-bold text-3xl md:text-4xl mb-12">
         Why Gaws?

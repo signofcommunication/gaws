@@ -14,7 +14,7 @@
                   Contact
                 </p>
                 <h2
-                  class="font-heading mb-4 font-bold tracking-tight text-black text-5xl sm:text-5xl"
+                  class="font-heading mb-4 font-bold tracking-tight text-black text-6xl sm:text-6xl"
                 >
                   Get in Touch
                 </h2>

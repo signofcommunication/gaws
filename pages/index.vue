@@ -16,8 +16,6 @@
         <h1
           ref="textElement"
           class="font-bold text-3xl sm:text-4xl md:text-5xl xl:text-[70px] text-gaws-base-color tracking-[-2px]"
-          data-aos="fade-up"
-          data-aos-duration="2000"
         ></h1>
         <p class="max-w-[70%] mx-auto mt-[20px] text-[#6767df] mb-[40px]">
           Our mission is to deliver IT solutions that enhance product quality,
@@ -54,6 +52,7 @@
     data-aos="fade-right"
     data-aos-easing="ease-in-back"
     data-aos-delay="300"
+    data-aos-once="true"
   >
     <h1 class="text-4xl text-center mb-12">Our Services</h1>
     <div
@@ -88,6 +87,7 @@
   <section
     class="container max-w-screen-xl flex flex-col mx-auto items-center justify-center my-16 px-4"
     data-aos="fade-left"
+    data-aos-once="true"
   >
     <h1 class="text-40px font-bold mb-12">Our Client</h1>
     <ResponsiveMarquee />
@@ -96,8 +96,12 @@
 
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from "vue";
-import AOS from "aos";
 import { gsap, TextPlugin } from "gsap/all";
+import AOS from "aos";
+import graduationCapLogo from "@/assets/education-cap.svg";
+import processorLogo from "@/assets/iconmonstr-cpu-2.svg";
+import gearsLogo from "@/assets/gear.svg";
+import deploymentLogo from "@/assets/manufacture.svg";
 
 // Initialise GSAP and register TextPlugin
 gsap.registerPlugin(TextPlugin);
@@ -112,12 +116,6 @@ const beforeEnter = (el) => {
 const enter = (el, done) => {
   el.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 500 }).onfinish = done;
 };
-
-// Service logos for the services section
-import graduationCapLogo from "@/assets/education-cap.svg";
-import processorLogo from "@/assets/iconmonstr-cpu-2.svg";
-import gearsLogo from "@/assets/gear.svg";
-import deploymentLogo from "@/assets/manufacture.svg";
 
 const servicesImages = [
   {
@@ -145,6 +143,7 @@ const servicesImages = [
       "Delivering smart manufacturing solutions with real-time monitoring, resource optimization, and enhanced efficiency.",
   },
 ];
+
 
 onMounted(() => {
   // Initialize AOS
@@ -177,9 +176,9 @@ onMounted(() => {
   }
 });
 
-onBeforeUnmount(() => {
-  AOS.refresh(); // Refresh AOS on component unmount
-});
+// onBeforeUnmount(() => {
+//   AOS.refresh();
+// });
 </script>
 
 <style scoped>
