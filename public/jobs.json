@@ -1,28 +1,31 @@
 [
   {
     "id": 1,
-    "title": "FullStack Developer",
+    "title": "Full Stack Developer",
     "department": "Engineering",
     "location": "Onsite",
     "type": "Full-time",
-    "description": "We are seeking an experienced Frontend Developer to join our engineering team. You will be responsible for building and maintaining high-quality web applications using modern JavaScript frameworks.",
+    "description": "We are looking for a Full Stack Developer to join our team. You will be responsible for designing, developing, and maintaining both frontend and backend applications to ensure software quality and performance.",
     "responsibilities": [
-      "Develop new user-facing features using Vue.js",
-      "Build reusable components and libraries for future use",
-      "Translate designs and wireframes into high-quality code",
-      "Optimize applications for maximum speed and scalability",
-      "Collaborate with backend developers and designers"
+      "Design and develop frontend applications",
+      "Design, develop, and maintain backend applications",
+      "Perform testing to ensure software quality",
+      "Support and fix software bugs",
+      "Work closely with cross-functional teams"
     ],
-    "requirements": [
-      "5+ years of experience in frontend development",
-      "Strong proficiency in JavaScript, HTML5, and CSS3",
-      "Experience with Vue.js and modern frontend frameworks",
-      "Understanding of server-side CSS preprocessing",
-      "Familiarity with RESTful APIs"
+    "qualifications": [
+      "Bachelor's degree in IT or Computer related field",
+      "Good problem-solving skills and attention to detail",
+      "Experience with HTML, CSS, and JavaScript",
+      "Experience in C#, PHP, Java, or other popular programming languages",
+      "Experience with database systems like MS-SQL, PostgreSQL, Oracle, or MongoDB",
+      "Experience with MVC architecture and Web API development",
+      "Familiarity with Git version control system",
+      "Ability to work in a team, meet deadlines, and work with minimal supervision"
     ],
-    "companyDescription": "Tech Company is a leading provider of innovative software solutions. We strive to create a culture of collaboration and creativity.",
+    "companyDescription": "Tech Company is a leading provider of innovative software solutions. We foster a collaborative and supportive culture to drive success and creativity.",
     "benefits": [
-      "Competitive salary and performance bonuses",
+      "Competitive salary",
       "Health insurance and wellness programs",
       "Flexible working hours",
       "Opportunities for professional development",
@@ -35,24 +38,24 @@
     "department": "Analyst",
     "location": "Onsite",
     "type": "Full-time",
-    "description": "We are seeking an experienced Frontend Developer to join our engineering team. You will be responsible for building and maintaining high-quality web applications using modern JavaScript frameworks.",
+    "description": "We are looking for a System Analyst to join our team. You will be responsible for creating software design documentation, gathering user requirements, and proposing IT solutions to improve business operations.",
     "responsibilities": [
-      "Develop new user-facing features using Vue.js",
-      "Build reusable components and libraries for future use",
-      "Translate designs and wireframes into high-quality code",
-      "Optimize applications for maximum speed and scalability",
-      "Collaborate with backend developers and designers"
+      "Create Software Design and Analysis documentation such as Software Requirements Specification, Software Design Document, etc.",
+      "Gather user requirements",
+      "Create Business Process Modeling and propose improvements to support business operations through IT technology",
+      "Work collaboratively in teams, meet deadlines, and work with minimal supervision",
+      "Create reports for management and stakeholders regularly"
     ],
-    "requirements": [
-      "5+ years of experience in frontend development",
-      "Strong proficiency in JavaScript, HTML5, and CSS3",
-      "Experience with Vue.js and modern frontend frameworks",
-      "Understanding of server-side CSS preprocessing",
-      "Familiarity with RESTful APIs"
+    "qualifications": [
+      "Bachelor's degree in Information Systems or a Computer-related field",
+      "Strong communication skills, problem-solving skills, and attention to detail",
+      "Minimum 2 years of experience in a similar role",
+      "Experience in Business Process Modeling",
+      "Solid understanding of the System Development Life Cycle using Unified Process or Agile methodologies"
     ],
-    "companyDescription": "Tech Company is a leading provider of innovative software solutions. We strive to create a culture of collaboration and creativity.",
+    "companyDescription": "Tech Company is a leading provider of innovative software solutions. We foster a collaborative and creative culture to drive excellence in every project.",
     "benefits": [
-      "Competitive salary and performance bonuses",
+      "Competitive salary",
       "Health insurance and wellness programs",
       "Flexible working hours",
       "Opportunities for professional development",

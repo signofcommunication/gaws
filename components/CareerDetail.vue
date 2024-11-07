@@ -115,7 +115,7 @@
             <h2 class="text-xl font-semibold mb-4">Requirements</h2>
             <ul class="space-y-3">
               <li
-                v-for="(requirement, index) in job.requirements"
+                v-for="(qualifications, index) in job.qualifications"
                 :key="index"
                 class="flex items-start"
               >
@@ -132,7 +132,7 @@
                     d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                   />
                 </svg>
-                <span class="text-gray-600">{{ requirement }}</span>
+                <span class="text-gray-600">{{ qualifications }}</span>
               </li>
             </ul>
           </section>
