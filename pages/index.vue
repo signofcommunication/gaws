@@ -18,12 +18,13 @@
           class="font-bold text-3xl sm:text-4xl md:text-5xl xl:text-[70px] text-gaws-base-color tracking-[-2px]"
         ></h1>
         <p
-          class="max-w-[70%] mx-auto mt-[20px] text-[#6767df] mb-[40px] text-xl"
+          class="max-w-[70%] mx-auto mt-[20px] text-[#333399] mb-[40px] text-xl"
         >
           Our mission is to deliver IT solutions that enhance product quality,
           streamline processes, and empower quick, strategic decisions—driving
           efficiency and growth for your business.
         </p>
+
         <a
           href="#services"
           class="text-base text-white sm:text-lg bg-gaws-base-color hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full px-4 py-2 sm:px-5 sm:py-2.5 text-center inline-flex max-w-max me-2 mb-2 dark:hover:bg-blue-700 dark:focus:ring-blue-800 items-center"
