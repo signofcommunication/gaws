@@ -66,7 +66,7 @@ useSeoMeta({
 
     <!-- Services List Section -->
     <section id="services-list" class="py-16">
-      <header class="flex flex-col items-center justify-center mt-10">
+      <header class="flex flex-col items-center justify-center my-20">
         <h1 class="font-bold text-6xl">Capabilities</h1>
         <p class="max-w-2xl mx-auto text-center text-lg my-10">
           Our capabilities will help organizations transform their business,
