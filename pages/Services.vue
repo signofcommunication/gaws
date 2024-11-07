@@ -44,7 +44,7 @@ useSeoMeta({
   <!-- Single Root Element -->
   <div>
     <!-- Header Section -->
-    <section class="bg-gaws-base-color py-16">
+    <section class="bg-gaws-base-color py-28">
       <div
         id="header-services"
         class="container mx-auto px-6 text-center text-white flex flex-col items-center justify-center space-y-6"
