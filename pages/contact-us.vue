@@ -313,8 +313,32 @@ const servicesList = [
 ];
 
 const handleSubmit = () => {
-  // Handle the form submission
-  console.log(formData.value);
+  const data = {
+    name: this.form.name,
+    email: this.form.email,
+    message: `<h4>New Enquiry From Website</h4></br>
+          <p><b>Name:</b> ${formData.value.name}</p>
+          <p><b>Email:</b> ${formData.value.email}</p>
+          <p><b>Service:</b> ${formData.value.service}</p>
+          <p><b>Message:</b> ${formData.value.message}</p>`,
+  };
+
+  fetch("/send_email.php", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded",
+    },
+    body: new URLSearchParams(data),
+  })
+    .then((res) => {
+      alert("Email sent successfully");
+      formData.value = {
+        name: '',
+        email: '',
+        service: '',
+        message: ''
+      }
+    })
 };
 </script>
 
