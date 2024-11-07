@@ -114,7 +114,7 @@ onMounted(() => {
 
     <!-- Description -->
     <section
-      class="container max-w-screen-xl mx-auto flex flex-col items-center justify-center my-12"
+      class="container max-w-screen-xl mx-auto flex flex-col items-center justify-center py-24"
     >
       <div class="description">
         <p
