@@ -161,24 +161,24 @@ onMounted(() => {
         >
           <h1 class="font-bold text-2xl md:text-3xl vision mb-4">Vision</h1>
           <p class="text-base md:text-lg mb-6">
-            Menjadi perusahaan teknologi terdepan yang memberikan solusi
-            inovatif untuk memajukan kehidupan masyarakat dan dunia bisnis
-            secara berkelanjutan.
+            To become a leading technology company that provides innovative
+            solutions to advance people's lives and the business world in a
+            sustainable manner.
           </p>
           <h1 class="font-bold text-2xl md:text-3xl mission mb-4">Mission</h1>
           <ol class="list-decimal pl-5 text-base md:text-lg">
             <li class="mb-4">
-              Mengembangkan produk dan layanan yang dapat memberikan manfaat
-              nyata bagi pelanggan melalui teknologi yang efisien dan ramah
-              lingkungan.
+              Developing products and services that can provide real benefits to
+              customers through efficient and environmentally friendly
+              technology.
             </li>
             <li class="mb-4">
-              Memberikan pengalaman pelanggan yang unggul melalui layanan yang
-              cepat, responsif, dan personalisasi.
+              Delivering superior customer experience through fast, responsive,
+              and personalized service.
             </li>
             <li>
-              Meningkatkan kompetensi karyawan dengan program pelatihan dan
-              pengembangan berkelanjutan untuk mendorong inovasi.
+              Improve employee competency with continuous training and
+              development programs to encourage innovation.
             </li>
           </ol>
         </div>
@@ -196,9 +196,9 @@ onMounted(() => {
       <h1 class="text-center why font-bold text-3xl md:text-4xl mb-12">
         Why Gaws?
       </h1>
-      <div class="flex flex-col md:flex-row items-center justify-center gap-8">
+      <div class="flex flex-col md:flex-row items-stretch justify-center gap-8">
         <div
-          class="flex flex-col justify-center items-center text-center max-w-md"
+          class="flex flex-col justify-center items-center text-center max-w-md flex-grow h-full"
         >
           <img
             src="/assets/Startup launch, ideas and metrics.png"
@@ -207,12 +207,13 @@ onMounted(() => {
           />
           <h1 class="font-bold text-2xl my-2">Weekly / Biweekly Meeting</h1>
           <p class="text-sm">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit
-            amet diam erat. Aenean euismod velit id dignissim ultrices.
+            In GAWS, weekly/ biweekly meeting is a standard that we do. You
+            don’t have to be busy looking for us, because we will meet you in a
+            predictable time
           </p>
         </div>
         <div
-          class="flex flex-col justify-center items-center text-center max-w-md"
+          class="flex flex-col justify-center items-center text-center max-w-md flex-grow h-full"
         >
           <img
             src="/assets/Ai assistant in retail.png"
@@ -221,8 +222,11 @@ onMounted(() => {
           />
           <h1 class="font-bold text-2xl my-2">Flexible Changes</h1>
           <p class="text-sm">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit
-            amet diam erat. Aenean euismod velit id dignissim ultrices.
+            Change is something that always appear in IT projects. At GAWS,
+            change in a particular scale are not the things that we can’t
+            handle. If your digital transformation process is so unpredictable,
+            we can arrange managed services for you. You don’t have to worry
+            about the changes! It’s all managed
           </p>
         </div>
       </div>
