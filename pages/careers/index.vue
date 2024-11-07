@@ -28,7 +28,7 @@
 
     <section class="py-8 px-4" id="job-listing">
       <div class="header flex flex-col items-center justify-center text-center">
-        <h1 class="font-bold text-3xl sm:text-4xl">Opening Positions</h1>
+        <h1 class="font-bold text-3xl sm:text-4xl my-4">Opening Positions</h1>
         <p class="max-w-4xl sm:max-w-6xl my-6 text-sm sm:text-base lg:text-lg">
           We strive to create rockstar teams instead of rockstar individuals. If
           you are a team player who is always eager to learn new things or
