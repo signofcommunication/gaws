@@ -177,7 +177,7 @@
 </template>
 
 <script setup>
-import { ref, watch } from 'vue';
+import { ref, watch,onMounted } from 'vue';
 
 const props = defineProps(['details']);
 const job = ref({
@@ -203,5 +203,7 @@ watch(
   { immediate: true }
 );
 
-console.log(job.value);
+onMounted(() => {
+  window.scrollTo({top: 0, behavior:'smooth'})
+})
 </script>
